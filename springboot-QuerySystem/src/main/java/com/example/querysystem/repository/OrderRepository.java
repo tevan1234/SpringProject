@@ -18,10 +18,10 @@ public interface OrderRepository extends JpaRepository<Order, Integer>{
 	 	List<Order> filterOrders(String holderCardNumber);
 	    
 	 	// 根據訂單ID查詢
-	 	Optional<Order> findOrderById(Integer orderId);
+	 	Order findOrderById(Integer orderId);
 	    
 	    // 根據持卡人卡號查詢
-	 	Optional<Order> findByHolderCardNumber(String holderCardNumber);
+	 	Order findByHolderCardNumber(String holderCardNumber);
 
 	    // 新增訂單，JpaRepository的save方法會處理
 	    // void addOrder(Order order); // 使用 save() 替代

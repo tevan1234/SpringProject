@@ -1,6 +1,6 @@
 package com.example.querysystem.exception;
 
-public class PasswordInvalidException extends Exception{
+public class PasswordInvalidException extends CertException{
 	public PasswordInvalidException() {
 		super("密碼無效");
 	}

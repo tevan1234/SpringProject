@@ -20,10 +20,10 @@ public interface ProductRepository extends JpaRepository<Product, Integer>{
     List<Product> findAll();
 
     // 根據 ID 查詢產品
-    Optional<Product> findProductById(Integer prodouctId);
+    Product findProductById(Integer prodouctId);
 
     // 根據產品名稱查詢
-    Optional<Product> findProductByType(String productType);
+    Product findProductByType(String productType);
     
     // 新增商品，JpaRepository的save方法會處理
     // void addProduct(Product product); // 使用 save() 替代

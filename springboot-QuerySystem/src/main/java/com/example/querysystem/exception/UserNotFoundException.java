@@ -1,6 +1,6 @@
 package com.example.querysystem.exception;
 
-public class UserNotFoundException extends Exception{
+public class UserNotFoundException extends CertException{
 	public UserNotFoundException() {
 		super("查無使用者");
 	}
