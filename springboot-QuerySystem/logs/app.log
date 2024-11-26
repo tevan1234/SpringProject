@@ -1,0 +1,4 @@
+2024-11-26T00:41:09.537+08:00  INFO 29952 --- [springmvc] [RMI TCP Connection(202)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-11-26T00:41:09.647+08:00  INFO 29952 --- [springmvc] [RMI TCP Connection(202)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-26T00:41:09.658+08:00  INFO 29952 --- [springmvc] [RMI TCP Connection(202)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-26T00:41:09.661+08:00  INFO 29952 --- [springmvc] [RMI TCP Connection(202)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
