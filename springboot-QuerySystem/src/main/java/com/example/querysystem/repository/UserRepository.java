@@ -19,10 +19,13 @@ public interface UserRepository extends JpaRepository<User, Integer>{
 	List<User> findAll();
 	
 	// 根據 username 查詢使用者
-    Optional<User> findByUsername(String username);
+    Optional<User> findUserByname(String username);
     
     // 根據 userId 查詢使用者
-    Optional<User> findById(Integer userId);
+    Optional<User> findUserById(Integer userId);
+    
+    // 新增使用者，JpaRepository的save方法會處理 ，在service層呼叫即可
+    // void addUser(User user); // 使用 save() 替代 
     
     // 更新使用者的 active 狀態
     @Modifying
@@ -49,5 +52,5 @@ public interface UserRepository extends JpaRepository<User, Integer>{
     void updatePasswordHash(Integer userId, String newPasswordHash);
     
     // 根據 userId 刪除使用者
-    void deleteById(Integer userId);
+    void deleteUserById(Integer userId);
 }

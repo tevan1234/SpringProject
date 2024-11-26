@@ -20,10 +20,10 @@ public interface ProductRepository extends JpaRepository<Product, Integer>{
     List<Product> findAll();
 
     // 根據 ID 查詢產品
-    Optional<Product> findById(Integer prodouctId);
+    Optional<Product> findProductById(Integer prodouctId);
 
     // 根據產品名稱查詢
-    Optional<Product> findByType(String productType);
+    Optional<Product> findProductByType(String productType);
     
     // 新增商品，JpaRepository的save方法會處理
     // void addProduct(Product product); // 使用 save() 替代
@@ -38,7 +38,7 @@ public interface ProductRepository extends JpaRepository<Product, Integer>{
     @Query("update products p set p.Status = :status where p.Id = :productId")
     void updateProductStatus(Integer productId,Boolean status);
     
-    void deleteById(Integer productId);
+    void deleteProduct(Integer productId);
     
     @Query("SELECT p.Type,(p.Sales + COALESCE(COUNT(o.Type), 0)) AS Sales FROM products p LEFT JOIN orders o ON p.Type = o.Type GROUP BY p.Type, p.Sales")
     Map<String, Integer>Ranking();

@@ -3,18 +3,24 @@ package com.example.querysystem.service;
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.stereotype.Service;
-
+import com.example.querysystem.exception.PasswordInvalidException;
+import com.example.querysystem.exception.UserNotFoundException;
 import com.example.querysystem.model.dto.UserDto;
 
 
-@Service
 public interface UserService {
 	
 	List<UserDto> findAll();
 	
-	Optional<UserDto> findByUsername(String username);
+	Optional<UserDto> findUserByname(String username);
 	
-	Optional<UserDto> findById(Integer userId);
-	
+	void addUser(String cardNumber, String username, String password, String phone, String mail, String role);
+
+	void updateUser(String userId, String active, String role);
+
+    void updatePassword(Integer userId, String username, String oldPassword, String newPassword) throws UserNotFoundException, PasswordInvalidException;
+
+    void updateInfo(String userId, String phone, String mail);
+
+    void deleteUser(String userId);
 }

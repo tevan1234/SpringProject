@@ -18,7 +18,7 @@ public interface OrderRepository extends JpaRepository<Order, Integer>{
 	 	List<Order> filterOrders(String holderCardNumber);
 	    
 	 	// 根據訂單ID查詢
-	 	Optional<Order> findById(Integer orderId);
+	 	Optional<Order> findOrderById(Integer orderId);
 	    
 	    // 根據持卡人卡號查詢
 	 	Optional<Order> findByHolderCardNumber(String holderCardNumber);
@@ -37,5 +37,5 @@ public interface OrderRepository extends JpaRepository<Order, Integer>{
 	    void updateOrderCharge(Integer orderId, String charge, String contact);
 
 	    // 刪除訂單
-	    void deleteById(Integer orderId);
+	    void deleteOrder(Integer orderId);
 }
