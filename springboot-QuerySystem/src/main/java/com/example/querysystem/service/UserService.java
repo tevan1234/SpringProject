@@ -12,7 +12,7 @@ public interface UserService {
 	
 	List<UserDto> findAll();
 	
-	Optional<UserDto> findUserByname(String username);
+	UserDto findUserByname(String username);
 	
 	void addUser(String cardNumber, String username, String password, String phone, String mail, String role);
 

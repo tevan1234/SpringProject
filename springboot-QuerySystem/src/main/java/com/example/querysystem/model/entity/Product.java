@@ -27,7 +27,7 @@ public class Product {
     private String type;
 
     @Column(name = "Price", precision = 10, scale = 2, nullable = false)
-    private BigDecimal price;
+    private Double price;
 
     @Column(name = "Status", nullable = false, columnDefinition = "TINYINT(1) DEFAULT 1")
     private Boolean status;

@@ -12,7 +12,7 @@ public interface ProductService {
 	
 	List<ProductDto> findAll();
 		
-	Optional<ProductDto> findProductById(Integer prodouctId);
+	ProductDto findProductById(Integer prodouctId);
 	
 	void addProdouct(String productType, String price);
 	
