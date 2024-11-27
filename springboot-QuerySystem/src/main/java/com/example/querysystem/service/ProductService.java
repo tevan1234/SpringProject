@@ -18,7 +18,7 @@ public interface ProductService {
 	
 	void updateProdouct(String productId,String price,String productStatus);
 	
-	void deleteProdouct(Integer prodouctId);
+	void deleteProdouct(String prodouctId);
 	
 	Map<String, Integer> Ranking();
 }
