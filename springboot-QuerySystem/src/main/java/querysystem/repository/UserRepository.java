@@ -29,25 +29,25 @@ public interface UserRepository extends JpaRepository<User, Integer>{
     // 更新使用者的 active 狀態
     @Modifying
     @Transactional
-    @Query("update users u set u.Active = :active where u.Id = :userId")
+    @Query("update User u set u.active = :active where u.Id = :userId")
     void updateUserActive(Integer userId,Boolean active);
     
     // 更新使用者的 role 狀態
     @Modifying
     @Transactional
-    @Query("UPDATE users u SET u.Role = :role WHERE u.Id = :userId")
+    @Query("UPDATE User u SET u.role = :role WHERE u.Id = :userId")
     void updateUserRole(Integer userId, String role);
 
     // 更新使用者的 phone 和 email
     @Modifying
     @Transactional
-    @Query("UPDATE users u SET u.Phone = :phone, u.Mail = :mail WHERE u.Id = :userId")
+    @Query("UPDATE User u SET u.phone = :phone, u.mail = :mail WHERE u.Id = :userId")
     void updateUserInfo(Integer userId, String phone, String mail);
     
     // 更新使用者的 password hash
     @Modifying
     @Transactional
-    @Query("UPDATE users u SET u.Password = :newPasswordHash WHERE u.Id = :userId")
+    @Query("UPDATE User u SET u.password = :newPasswordHash WHERE u.Id = :userId")
     void updatePasswordHash(Integer userId, String newPasswordHash);
     
     // 根據 userId 刪除使用者

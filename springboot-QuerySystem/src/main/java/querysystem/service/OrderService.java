@@ -13,7 +13,7 @@ public interface OrderService {
 	
 	public OrderDto findOrderById(Integer orderId);
 	
-	public OrderDto findByHolderCardNumber(String holderCardNumber);
+	//public OrderDto findByHolderCardNumber(String holderCardNumber);
 	
 	void addOrder(String Holder,String HolderCN,String Insured,String InsuredCN,String OrderType,String PayType,String orderDate,String charge,String contact,String comment);
 

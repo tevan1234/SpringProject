@@ -40,7 +40,7 @@ public class ProductServiceImpl implements ProductService{
 	public void addProdouct(String productType, String price) {
 		Product product = new Product();
         product.setType(productType);
-        product.setPrice(Double.parseDouble(price));
+        product.setPrice(Integer.parseInt(price));
         product.setStatus(true); // Default status
         product.setSales(0); // Default sales
         productRepository.save(product);
@@ -49,7 +49,7 @@ public class ProductServiceImpl implements ProductService{
 	@Override
 	public void updateProdouct(String productId, String price, String productStatus) {
 		if (!price.isEmpty()) {
-			productRepository.updateProductPrice(Integer.parseInt(productId), Double.parseDouble(price));
+			productRepository.updateProductPrice(Integer.parseInt(productId), Integer.parseInt(price));
 		}
 		if (!productStatus.isEmpty()) {
 			productRepository.updateProductStatus(Integer.parseInt(productId), Boolean.parseBoolean(productStatus));
@@ -59,7 +59,7 @@ public class ProductServiceImpl implements ProductService{
 
 	@Override
 	public void deleteProdouct(String prodouctId) {
-		productRepository.deleteProduct(Integer.parseInt(prodouctId));
+		productRepository.deleteById(Integer.parseInt(prodouctId));
 		
 	}
 

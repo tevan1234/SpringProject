@@ -58,7 +58,7 @@ public class OrderServiceImpl implements OrderService{
         return mapOrderToDto(order, products);
     }
 
-    public OrderDto findByHolderCardNumber(String holderCardNumber) {
+    /*public OrderDto findByHolderCardNumber(String holderCardNumber) {
         Order order = orderRepository.findByHolderCardNumber(holderCardNumber);
         List<Product> products = productRepository.findAll();
 
@@ -67,7 +67,7 @@ public class OrderServiceImpl implements OrderService{
         }
 
         return mapOrderToDto(order, products);
-    }
+    }*/
 
     public void updateOrder(String orderId, String orderStatus, String charge, String contact, String comment) {
         if (!orderStatus.isEmpty() || !comment.isEmpty()) {
@@ -98,7 +98,7 @@ public class OrderServiceImpl implements OrderService{
     }
 
     public void deleteOrder(Integer orderId) {
-        orderRepository.deleteOrder(orderId);
+        orderRepository.deleteById(orderId);
     }
  
 	

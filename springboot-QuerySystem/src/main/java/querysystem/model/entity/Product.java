@@ -26,8 +26,8 @@ public class Product {
     @Column(name = "Type", length = 45, nullable = false)
     private String type;
 
-    @Column(name = "Price", precision = 10, scale = 2, nullable = false)
-    private Double price;
+    @Column(name = "Price", nullable = false)
+    private Integer price;
 
     @Column(name = "Status", nullable = false, columnDefinition = "TINYINT(1) DEFAULT 1")
     private Boolean status;

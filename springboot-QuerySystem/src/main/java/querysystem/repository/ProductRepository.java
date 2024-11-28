@@ -29,16 +29,16 @@ public interface ProductRepository extends JpaRepository<Product, Integer>{
     
     @Modifying
     @Transactional
-    @Query("update products p set p.Price = :price where p.Id = :productId")
-    void updateProductPrice(Integer productId,Double price);
+    @Query("UPDATE Product p SET p.price = :price where p.Id = :productId")
+    void updateProductPrice(Integer productId,Integer price);
     
     @Modifying
     @Transactional
-    @Query("update products p set p.Status = :status where p.Id = :productId")
+    @Query("UPDATE Product p SET p.status = :status WHERE p.id = :productId")
     void updateProductStatus(Integer productId,Boolean status);
     
-    void deleteProduct(Integer productId);
+    void deleteById(Integer productId);
     
-    @Query("SELECT p.Type,(p.Sales + COALESCE(COUNT(o.Type), 0)) AS Sales FROM products p LEFT JOIN orders o ON p.Type = o.Type GROUP BY p.Type, p.Sales")
+    @Query("SELECT p.type,(p.sales + COALESCE(COUNT(o.type), 0)) AS Sales FROM Product p LEFT JOIN Order o ON p.type = o.type GROUP BY p.type, p.sales")
     Map<String, Integer>Ranking();
 }

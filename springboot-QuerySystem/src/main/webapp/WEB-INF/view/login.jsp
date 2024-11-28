@@ -21,7 +21,7 @@
 		</style>
 	</head>
 	<body style="padding: 15px ; background-color: #fff400a6;">
-		<form class="pure-form" method="post" action="/InsuranceSystem/login">
+		<form class="pure-form" method="post" action="/login">
 			<fieldset>
 				<legend>🎫Login</legend>
 				👤:<input type="text" name="username" placeholder="請輸入帳號" required /><p />
