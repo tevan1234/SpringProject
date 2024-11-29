@@ -55,16 +55,16 @@
 					</thead>
 					<%for(UserDto userDto : userDtos) { %>
 						<tr>
-							<td><%= userDto.getUid() %></td>
-							<td><%= userDto.getUrole() %></td>
-							<td><%= userDto.getUcardNumber() %></td>
-							<td><%= userDto.getUname() %></td>
-							<td><%= userDto.getUphone() %></td>
-							<td><%= userDto.getUmail() %></td>
-							<td><%= userDto.isUactive()%></td>
+							<td><%= userDto.getId() %></td>
+							<td><%= userDto.getRole() %></td>
+							<td><%= userDto.getCardNumber() %></td>
+							<td><%= userDto.getName() %></td>
+							<td><%= userDto.getPhone() %></td>
+							<td><%= userDto.getMail() %></td>
+							<td><%= userDto.isActive()%></td>
 							
-							<td><a href="/user/get?username=<%= userDto.getUname() %>" class="button-secondary pure-button">修改</a></td>
-							<td><a href="/user/delete?userId=<%= userDto.getUid() %>" class="button-error pure-button">刪除</a></td>
+							<td><a href="/user/get?username=<%= userDto.getName() %>" class="button-secondary pure-button">修改</a></td>
+							<td><a href="/user/delete?userId=<%= userDto.getId() %>" class="button-error pure-button">刪除</a></td>
 						</tr>
 					<% } %>
 				</table>

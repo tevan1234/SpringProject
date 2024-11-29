@@ -5,11 +5,11 @@ import lombok.Data;
 @Data
 public class UserDto {
 	
-	private int Uid;
-	private String Urole;
-	private String UcardNumber;
-	private String Uname;
-	private String Uphone;
-	private String Umail;
-	private boolean Uactive;
+	private int id;
+	private String role;
+	private String cardNumber;
+	private String name;
+	private String phone;
+	private String mail;
+	private boolean active;
 }

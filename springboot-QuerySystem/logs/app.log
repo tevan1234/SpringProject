@@ -1120,3 +1120,571 @@ Consider defining a bean of type 'querysystem.mapper.UserMapper' in your configu
 2024-11-29T15:34:17.626+08:00  INFO 27668 --- [springmvc] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2024-11-29T15:34:17.626+08:00  INFO 27668 --- [springmvc] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2024-11-29T15:34:17.628+08:00  INFO 27668 --- [springmvc] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-11-29T15:40:58.487+08:00  INFO 27668 --- [springmvc] [RMI TCP Connection(16)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-11-29T15:40:58.503+08:00  INFO 27668 --- [springmvc] [RMI TCP Connection(16)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-29T15:40:58.506+08:00  INFO 27668 --- [springmvc] [RMI TCP Connection(16)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-29T15:40:58.511+08:00  INFO 27668 --- [springmvc] [RMI TCP Connection(16)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-29T15:41:01.853+08:00  INFO 32668 --- [springmvc] [main] q.SpringbootQuerySystemApplication       : Starting SpringbootQuerySystemApplication using Java 21.0.5 with PID 32668 (C:\Users\USER\SpringProject\springboot-QuerySystem\target\classes started by USER in C:\Users\USER\SpringProject\springboot-QuerySystem)
+2024-11-29T15:41:01.855+08:00  INFO 32668 --- [springmvc] [main] q.SpringbootQuerySystemApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-11-29T15:41:02.309+08:00  INFO 32668 --- [springmvc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-29T15:41:02.309+08:00  INFO 32668 --- [springmvc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-29T15:41:02.352+08:00  INFO 32668 --- [springmvc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 3 JPA repository interfaces.
+2024-11-29T15:41:02.523+08:00  INFO 32668 --- [springmvc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-29T15:41:02.523+08:00  INFO 32668 --- [springmvc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-11-29T15:41:02.545+08:00  INFO 32668 --- [springmvc] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface querysystem.repository.OrderRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-11-29T15:41:02.546+08:00  INFO 32668 --- [springmvc] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface querysystem.repository.ProductRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-11-29T15:41:02.546+08:00  INFO 32668 --- [springmvc] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface querysystem.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-11-29T15:41:02.546+08:00  INFO 32668 --- [springmvc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 0 JDBC repository interfaces.
+2024-11-29T15:41:02.986+08:00  INFO 32668 --- [springmvc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-11-29T15:41:02.999+08:00  INFO 32668 --- [springmvc] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-29T15:41:02.999+08:00  INFO 32668 --- [springmvc] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-11-29T15:41:03.209+08:00  INFO 32668 --- [springmvc] [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-11-29T15:41:03.217+08:00  INFO 32668 --- [springmvc] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-29T15:41:03.217+08:00  INFO 32668 --- [springmvc] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1319 ms
+2024-11-29T15:41:03.348+08:00  INFO 32668 --- [springmvc] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-29T15:41:03.396+08:00  INFO 32668 --- [springmvc] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-29T15:41:03.425+08:00  INFO 32668 --- [springmvc] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-29T15:41:03.694+08:00  INFO 32668 --- [springmvc] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-29T15:41:03.721+08:00  INFO 32668 --- [springmvc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-29T15:41:03.851+08:00  INFO 32668 --- [springmvc] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@79d49790
+2024-11-29T15:41:03.853+08:00  INFO 32668 --- [springmvc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-29T15:41:04.602+08:00  INFO 32668 --- [springmvc] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-29T15:41:04.646+08:00  INFO 32668 --- [springmvc] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-29T15:41:04.894+08:00  INFO 32668 --- [springmvc] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-29T15:41:05.452+08:00  WARN 32668 --- [springmvc] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-29T15:41:05.823+08:00  INFO 32668 --- [springmvc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-11-29T15:41:05.829+08:00  INFO 32668 --- [springmvc] [main] q.SpringbootQuerySystemApplication       : Started SpringbootQuerySystemApplication in 4.326 seconds (process running for 4.926)
+2024-11-29T15:41:10.797+08:00  INFO 32668 --- [springmvc] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-29T15:41:10.797+08:00  INFO 32668 --- [springmvc] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-29T15:41:10.798+08:00  INFO 32668 --- [springmvc] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-11-29T15:42:51.729+08:00  INFO 32668 --- [springmvc] [RMI TCP Connection(11)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-11-29T15:42:51.744+08:00  INFO 32668 --- [springmvc] [RMI TCP Connection(11)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-29T15:42:51.746+08:00  INFO 32668 --- [springmvc] [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-29T15:42:51.753+08:00  INFO 32668 --- [springmvc] [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-29T15:42:53.813+08:00  INFO 9768 --- [springmvc] [main] q.SpringbootQuerySystemApplication       : Starting SpringbootQuerySystemApplication using Java 21.0.5 with PID 9768 (C:\Users\USER\SpringProject\springboot-QuerySystem\target\classes started by USER in C:\Users\USER\SpringProject\springboot-QuerySystem)
+2024-11-29T15:42:53.815+08:00  INFO 9768 --- [springmvc] [main] q.SpringbootQuerySystemApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-11-29T15:42:54.221+08:00  INFO 9768 --- [springmvc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-29T15:42:54.221+08:00  INFO 9768 --- [springmvc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-29T15:42:54.264+08:00  INFO 9768 --- [springmvc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 3 JPA repository interfaces.
+2024-11-29T15:42:54.419+08:00  INFO 9768 --- [springmvc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-29T15:42:54.419+08:00  INFO 9768 --- [springmvc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-11-29T15:42:54.435+08:00  INFO 9768 --- [springmvc] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface querysystem.repository.OrderRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-11-29T15:42:54.435+08:00  INFO 9768 --- [springmvc] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface querysystem.repository.ProductRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-11-29T15:42:54.435+08:00  INFO 9768 --- [springmvc] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface querysystem.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-11-29T15:42:54.435+08:00  INFO 9768 --- [springmvc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 0 JDBC repository interfaces.
+2024-11-29T15:42:54.862+08:00  INFO 9768 --- [springmvc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-11-29T15:42:54.878+08:00  INFO 9768 --- [springmvc] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-29T15:42:54.878+08:00  INFO 9768 --- [springmvc] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-11-29T15:42:55.074+08:00  INFO 9768 --- [springmvc] [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-11-29T15:42:55.081+08:00  INFO 9768 --- [springmvc] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-29T15:42:55.081+08:00  INFO 9768 --- [springmvc] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1216 ms
+2024-11-29T15:42:55.209+08:00  INFO 9768 --- [springmvc] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-29T15:42:55.256+08:00  INFO 9768 --- [springmvc] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-29T15:42:55.285+08:00  INFO 9768 --- [springmvc] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-29T15:42:55.551+08:00  INFO 9768 --- [springmvc] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-29T15:42:55.576+08:00  INFO 9768 --- [springmvc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-29T15:42:55.706+08:00  INFO 9768 --- [springmvc] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@38dbeb39
+2024-11-29T15:42:55.708+08:00  INFO 9768 --- [springmvc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-29T15:42:56.463+08:00  INFO 9768 --- [springmvc] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-29T15:42:56.502+08:00  INFO 9768 --- [springmvc] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-29T15:42:56.771+08:00  INFO 9768 --- [springmvc] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-29T15:42:57.335+08:00  WARN 9768 --- [springmvc] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-29T15:42:57.698+08:00  INFO 9768 --- [springmvc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-11-29T15:42:57.703+08:00  INFO 9768 --- [springmvc] [main] q.SpringbootQuerySystemApplication       : Started SpringbootQuerySystemApplication in 4.239 seconds (process running for 4.836)
+2024-11-29T15:43:01.650+08:00  INFO 9768 --- [springmvc] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-29T15:43:01.650+08:00  INFO 9768 --- [springmvc] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-29T15:43:01.651+08:00  INFO 9768 --- [springmvc] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-11-29T15:43:02.574+08:00 ERROR 9768 --- [springmvc] [http-nio-8081-exec-1] o.a.c.c.C.[.[localhost].[/].[jsp]        : Servlet.service() for servlet [jsp] threw exception
+
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [58] in the jsp file: [/WEB-INF/view/user/user.jsp]
+The method getUid() is undefined for the type UserDto
+55: 					</thead>
+56: 					<%for(UserDto userDto : userDtos) { %>
+57: 						<tr>
+58: 							<td><%= userDto.getUid() %></td>
+59: 							<td><%= userDto.getUrole() %></td>
+60: 							<td><%= userDto.getUcardNumber() %></td>
+61: 							<td><%= userDto.getUname() %></td>
+
+
+An error occurred at line: [59] in the jsp file: [/WEB-INF/view/user/user.jsp]
+The method getUrole() is undefined for the type UserDto
+56: 					<%for(UserDto userDto : userDtos) { %>
+57: 						<tr>
+58: 							<td><%= userDto.getUid() %></td>
+59: 							<td><%= userDto.getUrole() %></td>
+60: 							<td><%= userDto.getUcardNumber() %></td>
+61: 							<td><%= userDto.getUname() %></td>
+62: 							<td><%= userDto.getUphone() %></td>
+
+
+An error occurred at line: [60] in the jsp file: [/WEB-INF/view/user/user.jsp]
+The method getUcardNumber() is undefined for the type UserDto
+57: 						<tr>
+58: 							<td><%= userDto.getUid() %></td>
+59: 							<td><%= userDto.getUrole() %></td>
+60: 							<td><%= userDto.getUcardNumber() %></td>
+61: 							<td><%= userDto.getUname() %></td>
+62: 							<td><%= userDto.getUphone() %></td>
+63: 							<td><%= userDto.getUmail() %></td>
+
+
+An error occurred at line: [61] in the jsp file: [/WEB-INF/view/user/user.jsp]
+The method getUname() is undefined for the type UserDto
+58: 							<td><%= userDto.getUid() %></td>
+59: 							<td><%= userDto.getUrole() %></td>
+60: 							<td><%= userDto.getUcardNumber() %></td>
+61: 							<td><%= userDto.getUname() %></td>
+62: 							<td><%= userDto.getUphone() %></td>
+63: 							<td><%= userDto.getUmail() %></td>
+64: 							<td><%= userDto.isUactive()%></td>
+
+
+An error occurred at line: [62] in the jsp file: [/WEB-INF/view/user/user.jsp]
+The method getUphone() is undefined for the type UserDto
+59: 							<td><%= userDto.getUrole() %></td>
+60: 							<td><%= userDto.getUcardNumber() %></td>
+61: 							<td><%= userDto.getUname() %></td>
+62: 							<td><%= userDto.getUphone() %></td>
+63: 							<td><%= userDto.getUmail() %></td>
+64: 							<td><%= userDto.isUactive()%></td>
+65: 							
+
+
+An error occurred at line: [63] in the jsp file: [/WEB-INF/view/user/user.jsp]
+The method getUmail() is undefined for the type UserDto
+60: 							<td><%= userDto.getUcardNumber() %></td>
+61: 							<td><%= userDto.getUname() %></td>
+62: 							<td><%= userDto.getUphone() %></td>
+63: 							<td><%= userDto.getUmail() %></td>
+64: 							<td><%= userDto.isUactive()%></td>
+65: 							
+66: 							<td><a href="/user/get?username=<%= userDto.getUname() %>" class="button-secondary pure-button">修改</a></td>
+
+
+An error occurred at line: [64] in the jsp file: [/WEB-INF/view/user/user.jsp]
+The method isUactive() is undefined for the type UserDto
+61: 							<td><%= userDto.getUname() %></td>
+62: 							<td><%= userDto.getUphone() %></td>
+63: 							<td><%= userDto.getUmail() %></td>
+64: 							<td><%= userDto.isUactive()%></td>
+65: 							
+66: 							<td><a href="/user/get?username=<%= userDto.getUname() %>" class="button-secondary pure-button">修改</a></td>
+67: 							<td><a href="/user/delete?userId=<%= userDto.getUid() %>" class="button-error pure-button">刪除</a></td>
+
+
+An error occurred at line: [66] in the jsp file: [/WEB-INF/view/user/user.jsp]
+The method getUname() is undefined for the type UserDto
+63: 							<td><%= userDto.getUmail() %></td>
+64: 							<td><%= userDto.isUactive()%></td>
+65: 							
+66: 							<td><a href="/user/get?username=<%= userDto.getUname() %>" class="button-secondary pure-button">修改</a></td>
+67: 							<td><a href="/user/delete?userId=<%= userDto.getUid() %>" class="button-error pure-button">刪除</a></td>
+68: 						</tr>
+69: 					<% } %>
+
+
+An error occurred at line: [67] in the jsp file: [/WEB-INF/view/user/user.jsp]
+The method getUid() is undefined for the type UserDto
+64: 							<td><%= userDto.isUactive()%></td>
+65: 							
+66: 							<td><a href="/user/get?username=<%= userDto.getUname() %>" class="button-secondary pure-button">修改</a></td>
+67: 							<td><a href="/user/delete?userId=<%= userDto.getUid() %>" class="button-error pure-button">刪除</a></td>
+68: 						</tr>
+69: 					<% } %>
+70: 				</table>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:81) ~[tomcat-embed-jasper-10.1.33.jar:10.1.33]
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214) ~[tomcat-embed-jasper-10.1.33.jar:10.1.33]
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:543) ~[tomcat-embed-jasper-10.1.33.jar:10.1.33]
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402) ~[tomcat-embed-jasper-10.1.33.jar:10.1.33]
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372) ~[tomcat-embed-jasper-10.1.33.jar:10.1.33]
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356) ~[tomcat-embed-jasper-10.1.33.jar:10.1.33]
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603) ~[tomcat-embed-jasper-10.1.33.jar:10.1.33]
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396) ~[tomcat-embed-jasper-10.1.33.jar:10.1.33]
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377) ~[tomcat-embed-jasper-10.1.33.jar:10.1.33]
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325) ~[tomcat-embed-jasper-10.1.33.jar:10.1.33]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.33.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.1.15.jar:6.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.1.15.jar:6.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.1.15.jar:6.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:171) ~[spring-webmvc-6.1.15.jar:6.1.15]
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:314) ~[spring-webmvc-6.1.15.jar:6.1.15]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1432) ~[spring-webmvc-6.1.15.jar:6.1.15]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1168) ~[spring-webmvc-6.1.15.jar:6.1.15]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106) ~[spring-webmvc-6.1.15.jar:6.1.15]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.15.jar:6.1.15]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.15.jar:6.1.15]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.15.jar:6.1.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.33.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.15.jar:6.1.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.33.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.15.jar:6.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar:6.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.15.jar:6.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar:6.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.15.jar:6.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar:6.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2024-11-29T15:43:02.581+08:00 ERROR 9768 --- [springmvc] [http-nio-8081-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [58] in the jsp file: [/WEB-INF/view/user/user.jsp]
+The method getUid() is undefined for the type UserDto
+55: 					</thead>
+56: 					<%for(UserDto userDto : userDtos) { %>
+57: 						<tr>
+58: 							<td><%= userDto.getUid() %></td>
+59: 							<td><%= userDto.getUrole() %></td>
+60: 							<td><%= userDto.getUcardNumber() %></td>
+61: 							<td><%= userDto.getUname() %></td>
+
+
+An error occurred at line: [59] in the jsp file: [/WEB-INF/view/user/user.jsp]
+The method getUrole() is undefined for the type UserDto
+56: 					<%for(UserDto userDto : userDtos) { %>
+57: 						<tr>
+58: 							<td><%= userDto.getUid() %></td>
+59: 							<td><%= userDto.getUrole() %></td>
+60: 							<td><%= userDto.getUcardNumber() %></td>
+61: 							<td><%= userDto.getUname() %></td>
+62: 							<td><%= userDto.getUphone() %></td>
+
+
+An error occurred at line: [60] in the jsp file: [/WEB-INF/view/user/user.jsp]
+The method getUcardNumber() is undefined for the type UserDto
+57: 						<tr>
+58: 							<td><%= userDto.getUid() %></td>
+59: 							<td><%= userDto.getUrole() %></td>
+60: 							<td><%= userDto.getUcardNumber() %></td>
+61: 							<td><%= userDto.getUname() %></td>
+62: 							<td><%= userDto.getUphone() %></td>
+63: 							<td><%= userDto.getUmail() %></td>
+
+
+An error occurred at line: [61] in the jsp file: [/WEB-INF/view/user/user.jsp]
+The method getUname() is undefined for the type UserDto
+58: 							<td><%= userDto.getUid() %></td>
+59: 							<td><%= userDto.getUrole() %></td>
+60: 							<td><%= userDto.getUcardNumber() %></td>
+61: 							<td><%= userDto.getUname() %></td>
+62: 							<td><%= userDto.getUphone() %></td>
+63: 							<td><%= userDto.getUmail() %></td>
+64: 							<td><%= userDto.isUactive()%></td>
+
+
+An error occurred at line: [62] in the jsp file: [/WEB-INF/view/user/user.jsp]
+The method getUphone() is undefined for the type UserDto
+59: 							<td><%= userDto.getUrole() %></td>
+60: 							<td><%= userDto.getUcardNumber() %></td>
+61: 							<td><%= userDto.getUname() %></td>
+62: 							<td><%= userDto.getUphone() %></td>
+63: 							<td><%= userDto.getUmail() %></td>
+64: 							<td><%= userDto.isUactive()%></td>
+65: 							
+
+
+An error occurred at line: [63] in the jsp file: [/WEB-INF/view/user/user.jsp]
+The method getUmail() is undefined for the type UserDto
+60: 							<td><%= userDto.getUcardNumber() %></td>
+61: 							<td><%= userDto.getUname() %></td>
+62: 							<td><%= userDto.getUphone() %></td>
+63: 							<td><%= userDto.getUmail() %></td>
+64: 							<td><%= userDto.isUactive()%></td>
+65: 							
+66: 							<td><a href="/user/get?username=<%= userDto.getUname() %>" class="button-secondary pure-button">修改</a></td>
+
+
+An error occurred at line: [64] in the jsp file: [/WEB-INF/view/user/user.jsp]
+The method isUactive() is undefined for the type UserDto
+61: 							<td><%= userDto.getUname() %></td>
+62: 							<td><%= userDto.getUphone() %></td>
+63: 							<td><%= userDto.getUmail() %></td>
+64: 							<td><%= userDto.isUactive()%></td>
+65: 							
+66: 							<td><a href="/user/get?username=<%= userDto.getUname() %>" class="button-secondary pure-button">修改</a></td>
+67: 							<td><a href="/user/delete?userId=<%= userDto.getUid() %>" class="button-error pure-button">刪除</a></td>
+
+
+An error occurred at line: [66] in the jsp file: [/WEB-INF/view/user/user.jsp]
+The method getUname() is undefined for the type UserDto
+63: 							<td><%= userDto.getUmail() %></td>
+64: 							<td><%= userDto.isUactive()%></td>
+65: 							
+66: 							<td><a href="/user/get?username=<%= userDto.getUname() %>" class="button-secondary pure-button">修改</a></td>
+67: 							<td><a href="/user/delete?userId=<%= userDto.getUid() %>" class="button-error pure-button">刪除</a></td>
+68: 						</tr>
+69: 					<% } %>
+
+
+An error occurred at line: [67] in the jsp file: [/WEB-INF/view/user/user.jsp]
+The method getUid() is undefined for the type UserDto
+64: 							<td><%= userDto.isUactive()%></td>
+65: 							
+66: 							<td><a href="/user/get?username=<%= userDto.getUname() %>" class="button-secondary pure-button">修改</a></td>
+67: 							<td><a href="/user/delete?userId=<%= userDto.getUid() %>" class="button-error pure-button">刪除</a></td>
+68: 						</tr>
+69: 					<% } %>
+70: 				</table>
+
+
+Stacktrace:] with root cause
+
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [58] in the jsp file: [/WEB-INF/view/user/user.jsp]
+The method getUid() is undefined for the type UserDto
+55: 					</thead>
+56: 					<%for(UserDto userDto : userDtos) { %>
+57: 						<tr>
+58: 							<td><%= userDto.getUid() %></td>
+59: 							<td><%= userDto.getUrole() %></td>
+60: 							<td><%= userDto.getUcardNumber() %></td>
+61: 							<td><%= userDto.getUname() %></td>
+
+
+An error occurred at line: [59] in the jsp file: [/WEB-INF/view/user/user.jsp]
+The method getUrole() is undefined for the type UserDto
+56: 					<%for(UserDto userDto : userDtos) { %>
+57: 						<tr>
+58: 							<td><%= userDto.getUid() %></td>
+59: 							<td><%= userDto.getUrole() %></td>
+60: 							<td><%= userDto.getUcardNumber() %></td>
+61: 							<td><%= userDto.getUname() %></td>
+62: 							<td><%= userDto.getUphone() %></td>
+
+
+An error occurred at line: [60] in the jsp file: [/WEB-INF/view/user/user.jsp]
+The method getUcardNumber() is undefined for the type UserDto
+57: 						<tr>
+58: 							<td><%= userDto.getUid() %></td>
+59: 							<td><%= userDto.getUrole() %></td>
+60: 							<td><%= userDto.getUcardNumber() %></td>
+61: 							<td><%= userDto.getUname() %></td>
+62: 							<td><%= userDto.getUphone() %></td>
+63: 							<td><%= userDto.getUmail() %></td>
+
+
+An error occurred at line: [61] in the jsp file: [/WEB-INF/view/user/user.jsp]
+The method getUname() is undefined for the type UserDto
+58: 							<td><%= userDto.getUid() %></td>
+59: 							<td><%= userDto.getUrole() %></td>
+60: 							<td><%= userDto.getUcardNumber() %></td>
+61: 							<td><%= userDto.getUname() %></td>
+62: 							<td><%= userDto.getUphone() %></td>
+63: 							<td><%= userDto.getUmail() %></td>
+64: 							<td><%= userDto.isUactive()%></td>
+
+
+An error occurred at line: [62] in the jsp file: [/WEB-INF/view/user/user.jsp]
+The method getUphone() is undefined for the type UserDto
+59: 							<td><%= userDto.getUrole() %></td>
+60: 							<td><%= userDto.getUcardNumber() %></td>
+61: 							<td><%= userDto.getUname() %></td>
+62: 							<td><%= userDto.getUphone() %></td>
+63: 							<td><%= userDto.getUmail() %></td>
+64: 							<td><%= userDto.isUactive()%></td>
+65: 							
+
+
+An error occurred at line: [63] in the jsp file: [/WEB-INF/view/user/user.jsp]
+The method getUmail() is undefined for the type UserDto
+60: 							<td><%= userDto.getUcardNumber() %></td>
+61: 							<td><%= userDto.getUname() %></td>
+62: 							<td><%= userDto.getUphone() %></td>
+63: 							<td><%= userDto.getUmail() %></td>
+64: 							<td><%= userDto.isUactive()%></td>
+65: 							
+66: 							<td><a href="/user/get?username=<%= userDto.getUname() %>" class="button-secondary pure-button">修改</a></td>
+
+
+An error occurred at line: [64] in the jsp file: [/WEB-INF/view/user/user.jsp]
+The method isUactive() is undefined for the type UserDto
+61: 							<td><%= userDto.getUname() %></td>
+62: 							<td><%= userDto.getUphone() %></td>
+63: 							<td><%= userDto.getUmail() %></td>
+64: 							<td><%= userDto.isUactive()%></td>
+65: 							
+66: 							<td><a href="/user/get?username=<%= userDto.getUname() %>" class="button-secondary pure-button">修改</a></td>
+67: 							<td><a href="/user/delete?userId=<%= userDto.getUid() %>" class="button-error pure-button">刪除</a></td>
+
+
+An error occurred at line: [66] in the jsp file: [/WEB-INF/view/user/user.jsp]
+The method getUname() is undefined for the type UserDto
+63: 							<td><%= userDto.getUmail() %></td>
+64: 							<td><%= userDto.isUactive()%></td>
+65: 							
+66: 							<td><a href="/user/get?username=<%= userDto.getUname() %>" class="button-secondary pure-button">修改</a></td>
+67: 							<td><a href="/user/delete?userId=<%= userDto.getUid() %>" class="button-error pure-button">刪除</a></td>
+68: 						</tr>
+69: 					<% } %>
+
+
+An error occurred at line: [67] in the jsp file: [/WEB-INF/view/user/user.jsp]
+The method getUid() is undefined for the type UserDto
+64: 							<td><%= userDto.isUactive()%></td>
+65: 							
+66: 							<td><a href="/user/get?username=<%= userDto.getUname() %>" class="button-secondary pure-button">修改</a></td>
+67: 							<td><a href="/user/delete?userId=<%= userDto.getUid() %>" class="button-error pure-button">刪除</a></td>
+68: 						</tr>
+69: 					<% } %>
+70: 				</table>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:81) ~[tomcat-embed-jasper-10.1.33.jar:10.1.33]
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:214) ~[tomcat-embed-jasper-10.1.33.jar:10.1.33]
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:543) ~[tomcat-embed-jasper-10.1.33.jar:10.1.33]
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402) ~[tomcat-embed-jasper-10.1.33.jar:10.1.33]
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372) ~[tomcat-embed-jasper-10.1.33.jar:10.1.33]
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356) ~[tomcat-embed-jasper-10.1.33.jar:10.1.33]
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603) ~[tomcat-embed-jasper-10.1.33.jar:10.1.33]
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396) ~[tomcat-embed-jasper-10.1.33.jar:10.1.33]
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:377) ~[tomcat-embed-jasper-10.1.33.jar:10.1.33]
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:325) ~[tomcat-embed-jasper-10.1.33.jar:10.1.33]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.33.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.1.15.jar:6.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.1.15.jar:6.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.1.15.jar:6.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:632) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:408) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:330) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:267) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.servlet.view.InternalResourceView.renderMergedOutputModel(InternalResourceView.java:171) ~[spring-webmvc-6.1.15.jar:6.1.15]
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:314) ~[spring-webmvc-6.1.15.jar:6.1.15]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1432) ~[spring-webmvc-6.1.15.jar:6.1.15]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1168) ~[spring-webmvc-6.1.15.jar:6.1.15]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106) ~[spring-webmvc-6.1.15.jar:6.1.15]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.15.jar:6.1.15]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.15.jar:6.1.15]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.15.jar:6.1.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.33.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.15.jar:6.1.15]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.33.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.15.jar:6.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar:6.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.15.jar:6.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar:6.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.15.jar:6.1.15]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.15.jar:6.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2024-11-29T15:44:16.200+08:00  INFO 9768 --- [springmvc] [RMI TCP Connection(12)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-11-29T15:44:16.213+08:00  INFO 9768 --- [springmvc] [RMI TCP Connection(12)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-29T15:44:16.215+08:00  INFO 9768 --- [springmvc] [RMI TCP Connection(12)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-29T15:44:16.220+08:00  INFO 9768 --- [springmvc] [RMI TCP Connection(12)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-29T15:44:18.198+08:00  INFO 24320 --- [springmvc] [main] q.SpringbootQuerySystemApplication       : Starting SpringbootQuerySystemApplication using Java 21.0.5 with PID 24320 (C:\Users\USER\SpringProject\springboot-QuerySystem\target\classes started by USER in C:\Users\USER\SpringProject\springboot-QuerySystem)
+2024-11-29T15:44:18.200+08:00  INFO 24320 --- [springmvc] [main] q.SpringbootQuerySystemApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-11-29T15:44:18.596+08:00  INFO 24320 --- [springmvc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-29T15:44:18.596+08:00  INFO 24320 --- [springmvc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-29T15:44:18.643+08:00  INFO 24320 --- [springmvc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 3 JPA repository interfaces.
+2024-11-29T15:44:18.798+08:00  INFO 24320 --- [springmvc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-29T15:44:18.798+08:00  INFO 24320 --- [springmvc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-11-29T15:44:18.820+08:00  INFO 24320 --- [springmvc] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface querysystem.repository.OrderRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-11-29T15:44:18.821+08:00  INFO 24320 --- [springmvc] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface querysystem.repository.ProductRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-11-29T15:44:18.821+08:00  INFO 24320 --- [springmvc] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface querysystem.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-11-29T15:44:18.821+08:00  INFO 24320 --- [springmvc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 0 JDBC repository interfaces.
+2024-11-29T15:44:19.251+08:00  INFO 24320 --- [springmvc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-11-29T15:44:19.265+08:00  INFO 24320 --- [springmvc] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-29T15:44:19.265+08:00  INFO 24320 --- [springmvc] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-11-29T15:44:19.476+08:00  INFO 24320 --- [springmvc] [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-11-29T15:44:19.484+08:00  INFO 24320 --- [springmvc] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-29T15:44:19.484+08:00  INFO 24320 --- [springmvc] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1240 ms
+2024-11-29T15:44:19.612+08:00  INFO 24320 --- [springmvc] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-29T15:44:19.657+08:00  INFO 24320 --- [springmvc] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-29T15:44:19.685+08:00  INFO 24320 --- [springmvc] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-29T15:44:19.949+08:00  INFO 24320 --- [springmvc] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-29T15:44:19.976+08:00  INFO 24320 --- [springmvc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-29T15:44:20.109+08:00  INFO 24320 --- [springmvc] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@213012a0
+2024-11-29T15:44:20.111+08:00  INFO 24320 --- [springmvc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-29T15:44:20.853+08:00  INFO 24320 --- [springmvc] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-29T15:44:20.893+08:00  INFO 24320 --- [springmvc] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-29T15:44:21.141+08:00  INFO 24320 --- [springmvc] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-29T15:44:21.743+08:00  WARN 24320 --- [springmvc] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-29T15:44:22.124+08:00  INFO 24320 --- [springmvc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-11-29T15:44:22.130+08:00  INFO 24320 --- [springmvc] [main] q.SpringbootQuerySystemApplication       : Started SpringbootQuerySystemApplication in 4.273 seconds (process running for 4.845)
+2024-11-29T15:44:27.678+08:00  INFO 24320 --- [springmvc] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-29T15:44:27.678+08:00  INFO 24320 --- [springmvc] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-29T15:44:27.679+08:00  INFO 24320 --- [springmvc] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
