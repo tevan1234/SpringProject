@@ -14,6 +14,9 @@ import querysystem.service.OrderService;
 import querysystem.service.ProductService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
 
 
 
@@ -32,24 +35,24 @@ public class ProductController {
 		return "/product/product";
 	}
 	
-	/*@GetMapping("/list")
+	@GetMapping("/list")
 	public String Productlist(Model model) {
 		List<ProductDto>productDtos = productService.findAll();
 		model.addAttribute("productDtos", productDtos);
-		return "productlist";
+		return "/product/productlist";
 	}
 	
 	@GetMapping("/get")
 	public String getProduct(String productId,Model model) {
 		ProductDto productDto = productService.findProductById(productId);
 		model.addAttribute("productDto", productDto);
-		return "updateProduct";
+		return "/product/updateProduct";
 	}
 	
 	@GetMapping("/delete")
     public String deleteProdouct(String prodouctId) {
         productService.deleteProdouct(prodouctId);
-        return "redirect:/prodouct/list";
+        return "redirect:/prodouct/list";// 導向網址/product/list
     }
 	
 	@GetMapping("/rank")
@@ -58,10 +61,19 @@ public class ProductController {
         return "ranking"; 
 	}
 	
-	@GetMapping("/info")
-    public String getUserInfo(String cardNumber, Model model) {
-        List<OrderDto> orderDtos = orderService.filterOrders(cardNumber);
-        model.addAttribute("orderDtos", orderDtos);
-        return "userinfo"; // Maps to /WEB-INF/view/userinfo.jsp
-    }*/
+	@PostMapping("/add")
+	public String addProduct(@RequestParam String productType,@RequestParam String price) {
+		productService.addProdouct(productType, price);
+		
+		return "redirect:/prodouct/list";
+	}
+	
+	@PostMapping("/update")
+	public String updateProduct(@RequestParam String productId,@RequestParam String price,@RequestParam String productStatus) {
+		productService.updateProdouct(productId, price, productStatus);
+		
+		return "redirect:/prodouct/list";
+	}
+	
+	
 }

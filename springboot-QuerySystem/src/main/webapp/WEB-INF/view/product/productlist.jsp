@@ -34,7 +34,7 @@
 	<body style="background-color: #f4e500">
 		<%@ include file="/WEB-INF/view/menu.jsp" %>
 		<div style="padding: 15px ; display: ${userCert.role == 'EMPLOYEE' ? 'none' : 'block'}">
-			<form class="pure-form" method="post" action="/querysystem/product/add">
+			<form class="pure-form" method="post" action="/product/add">
 				<fieldset>
 					<legend>商品新增</legend>					
 					保險種類: <input type="text" name="productType" placeholder="請輸入 保險種類" required /><p /><p />
@@ -49,7 +49,7 @@
 			<fieldset>
 				<legend>
 			        product 列表
-			        <a href="/querysystem/product/rank" class="btn btn-outline-success" style="margin-left: 20px;">保單銷售排行</a>
+			        <a href="/product/rank" class="btn btn-outline-success" style="margin-left: 20px;">保單銷售排行</a>
 			    </legend>				
 				<table id="myTable" class="pure-table pure-table-bordered" style="background-color: white;">
 					<thead>
@@ -60,14 +60,14 @@
 					</thead>
 					<%for(ProductDto productDto : productDtos) { %>
 						<tr>
-							<td><%= productDto.getPid() %></td>
-							<td><%= productDto.getPtype() %></td>
-							<td><%= productDto.getPprice() %></td>
-							<td><%= productDto.getPstatus() %></td>
-							<td><%= productDto.getPsales() %></td>							
+							<td><%= productDto.getId() %></td>
+							<td><%= productDto.getType() %></td>
+							<td><%= productDto.getPrice() %></td>
+							<td><%= productDto.getStatus() %></td>
+							<td><%= productDto.getSales() %></td>							
 							
-							<td><a href="/product/get?productId=<%= productDto.getPid() %>" class="button-secondary pure-button"<c:if test="${userCert.role == 'EMPLOYEE'}">disabled</c:if>>修改</a></td>
-							<td><a href="/product/delete?productId=<%= productDto.getPid() %>" class="button-error pure-button"<c:if test="${userCert.role == 'EMPLOYEE'}">disabled</c:if>>刪除</a></td>
+							<td><a href="/product/get?productId=<%= productDto.getId() %>" class="button-secondary pure-button"<c:if test="${userCert.role == 'EMPLOYEE'}">disabled</c:if>>修改</a></td>
+							<td><a href="/product/delete?productId=<%= productDto.getId() %>" class="button-error pure-button"<c:if test="${userCert.role == 'EMPLOYEE'}">disabled</c:if>>刪除</a></td>
 						</tr>
 					<% } %>
 					
