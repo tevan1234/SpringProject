@@ -31,8 +31,8 @@ public class ProductServiceImpl implements ProductService{
 	}
 
 	@Override
-	public ProductDto findProductById(Integer prodouctId) {
-		Product product = productRepository.findProductById(prodouctId);
+	public ProductDto findProductById(String prodouctId) {
+		Product product = productRepository.findById(Integer.parseInt(prodouctId)).get();
 		return productMapper.toDto(product);
 	}
 

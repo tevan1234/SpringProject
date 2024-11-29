@@ -10,10 +10,10 @@ import querysystem.model.entity.User;
 @Component
 public class UserMapper {
 	@Autowired
-	private ModelMapper modelMapper;
+	private ModelMapper modelMapper;	
 	
 	public UserDto toDto(User user) {
-		// Entity 轉 DTO
+		// Entity 轉 DTO		
 		return modelMapper.map(user, UserDto.class);
 	}
 	

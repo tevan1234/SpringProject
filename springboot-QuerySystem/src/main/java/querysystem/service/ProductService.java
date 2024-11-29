@@ -12,7 +12,7 @@ public interface ProductService {
 	
 	List<ProductDto> findAll();
 		
-	ProductDto findProductById(Integer prodouctId);
+	ProductDto findProductById(String prodouctId);
 	
 	void addProdouct(String productType, String price);
 	
@@ -21,4 +21,5 @@ public interface ProductService {
 	void deleteProdouct(String prodouctId);
 	
 	Map<String, Integer> Ranking();
+	
 }

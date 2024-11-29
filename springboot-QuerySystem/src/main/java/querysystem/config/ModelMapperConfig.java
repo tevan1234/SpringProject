@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+
 @Configuration // Springboot 在啟動完成前會先行執行此配置
 public class ModelMapperConfig {
 	
@@ -13,6 +14,6 @@ public class ModelMapperConfig {
 	@Bean  
 	ModelMapper modelMapper() {
 		return new ModelMapper();
-	}
+	}	
 	
 }

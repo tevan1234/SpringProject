@@ -19,17 +19,19 @@ public interface ProductRepository extends JpaRepository<Product, Integer>{
     List<Product> findAll();
 
     // 根據 ID 查詢產品
-    Product findProductById(Integer prodouctId);
+  //  @Query("SELECT p.Id, p.type, p.rice, p.status, p.sales FROM Product p WHERE p.Id = :productId ")
+  //  Product findProductById(Integer prodouctId);
 
     // 根據產品名稱查詢
-    Product findProductByType(String productType);
+    //@Query("SELECT p.Id, p.type, p.rice, p.status, p.sales FROM Product p WHERE p.type = :productType")
+    Optional<Product> findProductByType(String productType);
     
     // 新增商品，JpaRepository的save方法會處理
     // void addProduct(Product product); // 使用 save() 替代
     
     @Modifying
     @Transactional
-    @Query("UPDATE Product p SET p.price = :price where p.Id = :productId")
+    @Query("UPDATE Product p SET p.price = :price WHERE p.Id = :productId")
     void updateProductPrice(Integer productId,Integer price);
     
     @Modifying

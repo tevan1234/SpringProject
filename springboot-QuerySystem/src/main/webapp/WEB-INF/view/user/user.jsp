@@ -13,7 +13,7 @@
 		<meta charset="UTF-8">
 		<title>使用者變更</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css">
-		<link rel="stylesheet" href="/InsuranceSystem/css/buttons.css">
+		<link rel="stylesheet" href="/querysystem/css/buttons.css">
 		
 		<!-- Jquery -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -25,7 +25,7 @@
 	<body style="background-color: #f4e500">
 		<%@ include file="/WEB-INF/view/menu.jsp" %>
 		<div style="padding: 15px ">
-			<form class="pure-form" method="post" action="/querysystem/user/add">
+			<form class="pure-form" method="post" action="/user/add">
 				<fieldset>
 					<legend>使用者新增</legend>
 					身分證字號: <input type="text" name="cardNumber" placeholder="請輸入 身分證字號" required /><p /><p />
@@ -63,8 +63,8 @@
 							<td><%= userDto.getUmail() %></td>
 							<td><%= userDto.isUactive()%></td>
 							
-							<td><a href="/querysystem/user/get?username=<%= userDto.getUname() %>" class="button-secondary pure-button">修改</a></td>
-							<td><a href="/querysystem/user/delete?userId=<%= userDto.getUid() %>" class="button-error pure-button">刪除</a></td>
+							<td><a href="/user/get?username=<%= userDto.getUname() %>" class="button-secondary pure-button">修改</a></td>
+							<td><a href="/user/delete?userId=<%= userDto.getUid() %>" class="button-error pure-button">刪除</a></td>
 						</tr>
 					<% } %>
 				</table>
