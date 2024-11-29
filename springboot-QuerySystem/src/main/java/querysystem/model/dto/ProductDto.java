@@ -4,9 +4,9 @@ import lombok.Data;
 
 @Data
 public class ProductDto {
-	public int Pid;
-	public String Ptype;//險種
-	public Integer Pprice;//年繳
-	public Boolean Pstatus;// 上架中/停賣
-	public int Psales;//售出件數
+	public int id;
+	public String type;//險種
+	public Integer price;//年繳
+	public Boolean status;// 上架中/停賣
+	public int sales;//售出件數
 }

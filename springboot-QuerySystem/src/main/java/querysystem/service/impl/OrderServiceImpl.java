@@ -105,22 +105,22 @@ public class OrderServiceImpl implements OrderService{
 	// 將 Order 轉換為 OrderDto 的輔助方法
     private OrderDto mapOrderToDto(Order order, List<Product> products) {
         OrderDto orderDto = new OrderDto();
-        orderDto.setOid(order.getId());
+        orderDto.setId(order.getId());
         orderDto.setHolder(order.getHolder());
-        orderDto.setHolderCardNumber(order.getHolderCN());
+        orderDto.setHolderCN(order.getHolderCN());
         orderDto.setInsured(order.getInsured());
-        orderDto.setInsuredCardNumber(order.getInsuredCN());
-        orderDto.setOtype(order.getType());
-        orderDto.setOpayType(order.getPayType());
-        orderDto.setOstatus(order.getStatus());
-        orderDto.setOdate(order.getOrderDate());
-        orderDto.setOcharge(order.getCharge());
-        orderDto.setOcontact(order.getContact());
-        orderDto.setOcomment(order.getComment());
+        orderDto.setInsuredCN(order.getInsuredCN());
+        orderDto.setType(order.getType());
+        orderDto.setPayType(order.getPayType());
+        orderDto.setStatus(order.getStatus());
+        orderDto.setDate(order.getOrderDate());
+        orderDto.setCharge(order.getCharge());
+        orderDto.setContact(order.getContact());
+        orderDto.setComment(order.getComment());
 
         // 計算 orderPrice
         Optional<Product> optProduct = products.stream()
-                .filter(p -> p.getType().equals(orderDto.getOtype()))
+                .filter(p -> p.getType().equals(orderDto.getType()))
                 .findFirst();
         optProduct.ifPresent(Product -> orderDto.setOrderPrice(Product.getPrice() * order.getPayType()));
 

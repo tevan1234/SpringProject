@@ -27,11 +27,12 @@ public class UserServiceImpl implements UserService{
 	
 	@Override
 	public List<UserDto> findAll() {
-		List<User> users = userRepository.findAll();
+		/*List<User> users = userRepository.findAll();
 		System.out.println(users);
 		List<UserDto> dtos = users.stream().map(userMapper::toDto).collect(toList());
 		System.out.println(dtos);
-		return dtos;
+		return dtos;*/
+		return userRepository.findAll().stream().map(userMapper::toDto).collect(toList());
 	}
 
 	@Override
