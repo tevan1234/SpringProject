@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import querysystem.model.dto.OrderDto;
 import querysystem.model.dto.UserDto;
 import querysystem.service.OrderService;
 import querysystem.service.UserService;
@@ -44,5 +45,18 @@ public class UserController {
     	userService.deleteUser(userId);
         return "redirect:/user/user";
     }
+    
+    @GetMapping("/update/password")
+    public String updatePassword(@RequestParam String param) {
+        return "/user/updatePassword";
+    }
+    
+    @GetMapping("/info")
+    public String getUserInfo(String cardNumber,Model model) {
+    	List<OrderDto>orderDtos = orderService.filterOrders(cardNumber);
+    	model.addAttribute("orderDtos",orderDtos);
+        return new String();
+    }
+    
     
 }
