@@ -11,11 +11,11 @@
 		<meta charset="UTF-8">
 		<title>Update User information</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css">
-		<link rel="stylesheet" href="/InsuranceSystem/css/buttons.css">
+		<link rel="stylesheet" href="/querysystem/css/buttons.css">
 	</head>
 	<body style="background-color: #f4e500">
 		<%@ include file="/WEB-INF/view/menu.jsp" %>
-		<form style="padding: 15px" class="pure-form" method="post" action ="/InsuranceSystem/user/update">
+		<form style="padding: 15px" class="pure-form" method="post" action ="/user/update">
 			<fieldset>
 				<legend>更新使用者資料</legend>
 				序號: <input type="text" name="userId" value="<%=userDto.getId() %>" readonly /><p />
