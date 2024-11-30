@@ -50,9 +50,9 @@ public class ProductController {
 	}
 	
 	@GetMapping("/delete")
-    public String deleteProdouct(String prodouctId) {
-        productService.deleteProdouct(prodouctId);
-        return "redirect:/prodouct/list";// 導向網址/product/list
+    public String deleteproduct(String productId) {
+        productService.deleteproduct(productId);
+        return "redirect:/product/list";// 導向網址/product/list
     }
 	
 	@GetMapping("/rank")
@@ -63,16 +63,16 @@ public class ProductController {
 	
 	@PostMapping("/add")
 	public String addProduct(@RequestParam String productType,@RequestParam String price) {
-		productService.addProdouct(productType, price);
+		productService.addproduct(productType, price);
 		
-		return "redirect:/prodouct/list";
+		return "redirect:/product/list";
 	}
 	
 	@PostMapping("/update")
 	public String updateProduct(@RequestParam String productId,@RequestParam String price,@RequestParam String productStatus) {
-		productService.updateProdouct(productId, price, productStatus);
+		productService.updateproduct(productId, price, productStatus);
 		
-		return "redirect:/prodouct/list";
+		return "redirect:/product/list";
 	}
 	
 	

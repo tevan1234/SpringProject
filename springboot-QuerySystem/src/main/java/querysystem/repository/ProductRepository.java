@@ -4,8 +4,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-import org.springframework.data.jdbc.repository.query.Modifying;
+
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
@@ -30,7 +31,7 @@ public interface ProductRepository extends JpaRepository<Product, Integer>{
     
     @Modifying
     @Transactional
-    @Query("UPDATE Product p SET p.price = :price WHERE p.Id = :productId")
+    @Query("UPDATE Product p SET p.price = :price WHERE p.id = :productId")
     void updateProductPrice(Integer productId,Integer price);
     
     @Modifying
@@ -41,5 +42,5 @@ public interface ProductRepository extends JpaRepository<Product, Integer>{
     void deleteById(Integer productId);
     
     @Query("SELECT p.type,(p.sales + COALESCE(COUNT(o.type), 0)) AS Sales FROM Product p LEFT JOIN Order o ON p.type = o.type GROUP BY p.type, p.sales")
-    Map<String, Integer>Ranking();
+    List<Object[]> Ranking();
 }

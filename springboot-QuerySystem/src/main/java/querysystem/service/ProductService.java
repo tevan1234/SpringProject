@@ -12,13 +12,13 @@ public interface ProductService {
 	
 	List<ProductDto> findAll();
 		
-	ProductDto findProductById(String prodouctId);
+	ProductDto findProductById(String productId);
 	
-	void addProdouct(String productType, String price);
+	void addproduct(String productType, String price);
 	
-	void updateProdouct(String productId,String price,String productStatus);
+	void updateproduct(String productId,String price,String productStatus);
 	
-	void deleteProdouct(String prodouctId);
+	void deleteproduct(String productId);
 	
 	Map<String, Integer> Ranking();
 	

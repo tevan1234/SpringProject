@@ -63,7 +63,7 @@
 							<td><%= productDto.getId() %></td>
 							<td><%= productDto.getType() %></td>
 							<td><%= productDto.getPrice() %></td>
-							<td><%= productDto.getStatus() %></td>
+							<td><%= productDto.getStatus() ? "在售":"已停售" %></td>
 							<td><%= productDto.getSales() %></td>							
 							
 							<td><a href="/product/get?productId=<%= productDto.getId() %>" class="button-secondary pure-button"<c:if test="${userCert.role == 'EMPLOYEE'}">disabled</c:if>>修改</a></td>

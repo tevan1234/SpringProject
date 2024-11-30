@@ -1,6 +1,7 @@
 package querysystem.service.impl;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -31,13 +32,13 @@ public class ProductServiceImpl implements ProductService{
 	}
 
 	@Override
-	public ProductDto findProductById(String prodouctId) {
-		Product product = productRepository.findById(Integer.parseInt(prodouctId)).get();
+	public ProductDto findProductById(String productId) {
+		Product product = productRepository.findById(Integer.parseInt(productId)).get();
 		return productMapper.toDto(product);
 	}
 
 	@Override
-	public void addProdouct(String productType, String price) {
+	public void addproduct(String productType, String price) {
 		Product product = new Product();
         product.setType(productType);
         product.setPrice(Integer.parseInt(price));
@@ -47,7 +48,7 @@ public class ProductServiceImpl implements ProductService{
 	}
 
 	@Override
-	public void updateProdouct(String productId, String price, String productStatus) {
+	public void updateproduct(String productId, String price, String productStatus) {
 		if (!price.isEmpty()) {
 			productRepository.updateProductPrice(Integer.parseInt(productId), Integer.parseInt(price));
 		}
@@ -58,14 +59,22 @@ public class ProductServiceImpl implements ProductService{
 	}
 
 	@Override
-	public void deleteProdouct(String prodouctId) {
-		productRepository.deleteById(Integer.parseInt(prodouctId));
+	public void deleteproduct(String productId) {
+		productRepository.deleteById(Integer.parseInt(productId));
 		
 	}
 
 	@Override
 	public Map<String, Integer> Ranking() {
-		return productRepository.Ranking();
+		List<Object[]> results = productRepository.Ranking();
+	    Map<String, Integer> rankingMap = new HashMap<>();
+	    
+	    for (Object[] row : results) {
+	        String type = (String) row[0];
+	        Integer sales = ((Number) row[1]).intValue();
+	        rankingMap.put(type, sales);
+	    }
+		return rankingMap;
 	}
 
 }

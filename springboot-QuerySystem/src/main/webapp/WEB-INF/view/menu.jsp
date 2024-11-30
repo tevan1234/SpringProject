@@ -35,7 +35,7 @@
                         <ul class="dropdown-menu dropdown-menu-dark">
                             <li><a class="dropdown-item" href="/product">保險商品</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="/prodouct/list" style="display: ${userCert.role == 'CUSTOMER' || userCert.role == null ? 'none' : 'block'};">保單銷售詳情</a></li>
+                            <li><a class="dropdown-item" href="/product/list" style="display: ${userCert.role == 'CUSTOMER' || userCert.role == null ? 'none' : 'block'};">保單銷售詳情</a></li>
                             <!-- <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li> -->
                         </ul>
