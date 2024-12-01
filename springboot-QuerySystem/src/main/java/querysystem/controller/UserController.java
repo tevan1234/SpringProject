@@ -80,10 +80,10 @@ public class UserController {
     
     
     @PostMapping("/update/password")
-    public String updatePassword(HttpSession session, @RequestParam String userId,@RequestParam String oldPassword,@RequestParam String newPassword,Model model) {
+    public String updatePassword(HttpSession session,@RequestParam String oldPassword,@RequestParam String newPassword,Model model) {
         try {
 			UserCert userCert = (UserCert)session.getAttribute("userCert");
-			userService.updatePassword(userCert.getUserId(), userCert.getUsername(), oldPassword, newPassword);
+			userService.updatePassword(userCert.getUserId(),userCert.getUsername() , oldPassword, newPassword);
 			model.addAttribute("message", "密碼更新成功");
 			return "result";
 		} catch (Exception e) {

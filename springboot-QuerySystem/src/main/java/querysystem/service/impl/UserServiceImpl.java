@@ -2,6 +2,7 @@ package querysystem.service.impl;
 
 import static java.util.stream.Collectors.toList;
 
+import java.net.Inet4Address;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
