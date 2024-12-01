@@ -47,8 +47,8 @@ public class OrderServiceImpl implements OrderService{
         return orderDtos;
     }
 
-    public OrderDto findOrderById(Integer orderId) {
-        Order order = orderRepository.findOrderById(orderId);
+    public OrderDto findOrderById(String orderId) {
+        Order order = orderRepository.findOrderById(Integer.parseInt(orderId));
         List<Product> products = productRepository.findAll();
 
         if (order == null) {

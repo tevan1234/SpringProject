@@ -11,7 +11,7 @@ public interface OrderService {
 	
 	public List<OrderDto> filterOrders(String holderCardNumber);
 	
-	public OrderDto findOrderById(Integer orderId);
+	public OrderDto findOrderById(String orderId);
 	
 	//public OrderDto findByHolderCardNumber(String holderCardNumber);
 	
