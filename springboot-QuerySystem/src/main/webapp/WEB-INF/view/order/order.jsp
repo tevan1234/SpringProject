@@ -80,10 +80,10 @@
 					<select name="orderType" class="form-control" >
 						<option value="汽車險">汽車險</option>
 						<option value="旅平險">旅平險</option>
-						<option value="汽車險">重大傷病險</option>
-						<option value="旅平險">意外險</option>
-						<option value="汽車險">天災險</option>
-						<option value="旅平險">儲蓄險</option>
+						<option value="重大傷病險">重大傷病險</option>
+						<option value="意外險">意外險</option>
+						<option value="天災險">天災險</option>
+						<option value="儲蓄險">儲蓄險</option>
 					</select>
 				</div>
 				<div class="col-4">
