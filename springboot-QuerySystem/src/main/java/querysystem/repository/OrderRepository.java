@@ -20,7 +20,7 @@ public interface OrderRepository extends JpaRepository<Order, Integer>{
 	 	List<Order> filterOrders(String holderCardNumber);
 	    
 	 	// 根據訂單ID查詢
-	 	Order findOrderById(Integer orderId);
+	 	Optional<Order> findById(Integer orderId);
 	    
 	    // 根據持卡人卡號查詢
 	 	//Order findByHolderCardNumber(String holderCardNumber);

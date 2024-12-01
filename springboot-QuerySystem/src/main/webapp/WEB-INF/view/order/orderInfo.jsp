@@ -24,7 +24,7 @@
 			</div>
 			<div class="col-md-6">
 				<label for="inputPassword4" class="form-label">要保人身分證字號</label> 
-				<input type="text" class="form-control" value="${ orderDto.holderCardNumber }" readonly>
+				<input type="text" class="form-control" value="${ orderDto.holderCN }" readonly>
 			</div>
 			<div class="col-md-6">
 				<label for="inputEmail4" class="form-label">被保人</label> 
@@ -32,7 +32,7 @@
 			</div>
 			<div class="col-md-6">
 				<label for="inputPassword4" class="form-label">被保人身分證字號</label> 
-				<input type="text" class="form-control" value="${ orderDto.insuredCardNumber }" readonly>
+				<input type="text" class="form-control" value="${ orderDto.insuredCN }" readonly>
 			</div>
 			<div class="col-3">
 				<label for="inputAddress" class="form-label">保險種類</label> 
@@ -48,7 +48,7 @@
 			</div>
 			<div class="col-3">
 				<label for="inputAddress" class="form-label">簽約日期</label> 
-				<input type="date" class="form-control" value=<%= orderDto.getDate() %> readonly>
+				<input type="date" class="form-control" value=<%= orderDto.getOrderDate() %> readonly>
 			</div>
 			<div class="col-6">
 				<label for="inputAddress2" class="form-label">負責業務</label> 

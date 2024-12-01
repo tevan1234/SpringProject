@@ -48,7 +48,7 @@ public class OrderServiceImpl implements OrderService{
     }
 
     public OrderDto findOrderById(String orderId) {
-        Order order = orderRepository.findOrderById(Integer.parseInt(orderId));
+        Order order = orderRepository.findById(Integer.parseInt(orderId)).get();
         List<Product> products = productRepository.findAll();
 
         if (order == null) {
@@ -113,7 +113,7 @@ public class OrderServiceImpl implements OrderService{
         orderDto.setType(order.getType());
         orderDto.setPayType(order.getPayType());
         orderDto.setStatus(order.getStatus());
-        orderDto.setDate(order.getOrderDate());
+        orderDto.setOrderDate(order.getOrderDate());
         orderDto.setCharge(order.getCharge());
         orderDto.setContact(order.getContact());
         orderDto.setComment(order.getComment());
