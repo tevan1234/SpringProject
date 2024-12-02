@@ -95,6 +95,7 @@ public class OrderServiceImpl implements OrderService{
         order.setComment(comment);
 
         orderRepository.save(order);
+        orderRepository.updateProductSales(order.getType());
     }
 
     public void deleteOrder(Integer orderId) {

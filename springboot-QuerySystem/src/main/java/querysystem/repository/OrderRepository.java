@@ -7,7 +7,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
 import querysystem.model.entity.Order;
 
@@ -26,7 +29,13 @@ public interface OrderRepository extends JpaRepository<Order, Integer>{
 	 	//Order findByHolderCardNumber(String holderCardNumber);
 
 	    // 新增訂單，JpaRepository的save方法會處理
-	    // void addOrder(Order order); // 使用 save() 替代
+	 	// void addOrder(Order order); // 使用 save() 替代
+	 	// 連接商品資料庫
+
+	 	@Modifying
+	 	@Transactional
+	 	@Query("UPDATE Product p SET p.sales = p.sales + 1 WHERE p.type = :type")
+	 	void updateProductSales(String type);	
 
 	    // 更新訂單狀態和評論
 	    @Modifying

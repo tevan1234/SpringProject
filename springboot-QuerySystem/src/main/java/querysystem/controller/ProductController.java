@@ -55,7 +55,7 @@ public class ProductController {
 	@GetMapping("/rank")
 	public String getRanking(Model model) {
 		model.addAttribute("ranking", productService.Ranking());
-        return "ranking"; 
+        return "/product/ranking"; 
 	}
 	
 	@PostMapping("/add")

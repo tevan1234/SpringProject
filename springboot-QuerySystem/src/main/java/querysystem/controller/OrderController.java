@@ -46,14 +46,14 @@ public class OrderController {
 	}
 	
 	@PostMapping("/add")
-	public String postMethodName(@RequestParam String holder, @RequestParam String holderCN, @RequestParam String insured, @RequestParam String insuredCN, @RequestParam String orderType, @RequestParam String payType, @RequestParam String orderDate, @RequestParam String charge, @RequestParam String contact, @RequestParam String comment) {
+	public String addOrder(@RequestParam String holder, @RequestParam String holderCN, @RequestParam String insured, @RequestParam String insuredCN, @RequestParam String orderType, @RequestParam String payType, @RequestParam String orderDate, @RequestParam String charge, @RequestParam String contact, @RequestParam String comment) {
 		orderService.addOrder(holder, holderCN, insured, insuredCN, orderType, payType, orderDate, charge, contact, comment);
 		
 		return "redirect:/order";
 	}
 	
 	@PostMapping("/update")
-	public String postMethodName(@RequestBody String orderId,@RequestParam String orderStatus, @RequestParam String charge, @RequestParam String contact, @RequestParam String comment) {
+	public String updateOrder(@RequestBody String orderId,@RequestParam String orderStatus, @RequestParam String charge, @RequestParam String contact, @RequestParam String comment) {
 		orderService.updateOrder(orderId, orderStatus, charge, contact, comment);
 		
 		return "redirect:/order";
