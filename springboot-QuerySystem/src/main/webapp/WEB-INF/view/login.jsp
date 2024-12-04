@@ -19,6 +19,12 @@
 				text-align: center;
 			}
 		</style>
+		<script>
+	        function showAlertAndRedirect(message, redirectUrl) {
+	            alert(message);
+	            window.location.href = redirectUrl;
+	        }
+	    </script>
 	</head>
 	<body style="padding: 15px ; background-color: #fff400a6;">
 		<form class="pure-form" method="post" action="/login">
@@ -30,5 +36,19 @@
 				<button type="submit" class="pure-button pure-button-primary">登入</button>
 			</fieldset>
 		</form>
+		
+		<%
+		    String errorMessage = (String) request.getAttribute("errorMessage");
+		    Boolean redirect = (Boolean) request.getAttribute("redirect");
+		
+		    if (errorMessage != null && Boolean.TRUE.equals(redirect)) {
+		%>
+		    <script>
+		        showAlertAndRedirect("<%= errorMessage %>", "/register");
+		    </script>
+		<%
+		    }
+		%>
+		
 	</body>
 </html>

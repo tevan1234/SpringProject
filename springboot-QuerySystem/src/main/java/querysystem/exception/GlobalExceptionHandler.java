@@ -29,4 +29,6 @@ public class GlobalExceptionHandler {
 		ApiResponse<Object> apiResponse = ApiResponse.error(HttpStatus.FORBIDDEN.value(), "伺服器內部錯誤, "+e);
 		return ResponseEntity.status(HttpStatus.FORBIDDEN).body(apiResponse);
 	}
+	
+	
 }

@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
+import querysystem.exception.CertException;
+import querysystem.exception.UserNotFoundException;
 import querysystem.model.dto.UserCert;
 import querysystem.service.CertService;
 
@@ -33,8 +35,9 @@ public class LoginController {
 			userCert = certService.getCert(username, password);
 		} catch (Exception e) {
 			// 將錯誤丟給(重導) error.jsp
-			model.addAttribute("message", e.getMessage());
-			return "error";//導到error.jsp
+			model.addAttribute("errorMessage", e.getMessage());
+			model.addAttribute("redirect", true);
+			return "login";//導到error.jsp
 		}
 		session.setAttribute("userCert", userCert); // 放憑證
 		session.setAttribute("locale", req.getLocale());
