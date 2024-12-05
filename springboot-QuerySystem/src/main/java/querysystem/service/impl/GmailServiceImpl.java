@@ -73,14 +73,15 @@ public class GmailServiceImpl implements GmailService{
         Session session = Session.getDefaultInstance(props, null);
 
         MimeMessage email = new MimeMessage(session);
+        
         //email.setFrom(new InternetAddress(from));
         email.addRecipient(javax.mail.Message.RecipientType.TO, new InternetAddress(to));
         email.setSubject(subject);
+        
         // 取得當前日期與時間
         LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        String formattedDateTime = now.format(formatter);
-        
+        String formattedDateTime = now.format(formatter);        
         
         // 將日期與時間加入信件內容
         String fullBodyText = bodyText +String.valueOf(code)+ "\n\nSent on: " + formattedDateTime;

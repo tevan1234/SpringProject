@@ -32,3 +32,6 @@
 2024-12-06T00:10:25.868+08:00  WARN 22912 --- [springmvc] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2024-12-06T00:10:26.264+08:00  INFO 22912 --- [springmvc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
 2024-12-06T00:10:26.270+08:00  INFO 22912 --- [springmvc] [main] q.SpringbootQuerySystemApplication       : Started SpringbootQuerySystemApplication in 5.576 seconds (process running for 6.308)
+2024-12-06T00:20:12.593+08:00  INFO 22912 --- [springmvc] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-06T00:20:12.593+08:00  INFO 22912 --- [springmvc] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-06T00:20:12.594+08:00  INFO 22912 --- [springmvc] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
