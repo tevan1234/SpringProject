@@ -20,7 +20,7 @@ public interface UserRepository extends JpaRepository<User, Integer>{
 	
 	// 根據 username 查詢使用者
 	@Query("SELECT u FROM User u WHERE u.name = :username")
-	Optional<User> findUserByName(String username);
+	User findUserByName(String username);
     
     // 根據 userId 查詢使用者
 	User findUserById(Integer userId);

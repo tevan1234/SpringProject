@@ -33,7 +33,7 @@ public class LoginController {
 		
 		try {
 			userCert = certService.getCert(username, password);
-		} catch (Exception e) {
+		} catch (CertException e) {
 			// 將錯誤丟給(重導) error.jsp
 			model.addAttribute("errorMessage", e.getMessage());
 			model.addAttribute("redirect", true);

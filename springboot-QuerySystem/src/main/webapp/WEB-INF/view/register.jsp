@@ -54,7 +54,7 @@
     	<%@ include file="/WEB-INF/view/menu.jsp" %>
         <div style="padding: 15px">
             <!-- 發送驗證碼功能 -->
-            <form class="pure-form" method="post" action="/register/sendmail">
+            <form class="pure-form" method="post" action="/register/sendMail">
                 <fieldset>
                     <legend>綁定郵件</legend>
                     電郵: <input type="email" name="mail" placeholder="選填 email" required />

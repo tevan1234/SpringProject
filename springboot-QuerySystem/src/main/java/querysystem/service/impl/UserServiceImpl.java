@@ -38,7 +38,7 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public UserDto findUserByname(String username) {
-		User user = userRepository.findUserByName(username).get();
+		User user = userRepository.findUserByName(username);
 		return userMapper.toDto(user);
 	}
 
@@ -60,6 +60,33 @@ public class UserServiceImpl implements UserService{
         
         userRepository.save(user);
 	}
+	
+	@Override
+	public void RegisterUser(String CardNumber, String username, String password, String phone, String mail, String code, Integer verifycode) {
+		String salt = Hash.getSalt();
+		String newpassword = Hash.getHash(password,salt);
+		Boolean active = false;
+		
+		if(code.isEmpty()) {
+			active = false;
+		}			
+		else if (Integer.parseInt(code) == verifycode) {
+			active = true;
+		}		
+		
+		User user = new User();
+		user.setCardNumber(CardNumber);
+		user.setName(username);
+		user.setSalt(salt);
+		user.setPassword(newpassword);
+		user.setPhone(phone);
+		user.setMail(mail);
+		user.setRole("CUSTOMER");
+		user.setActive(active);
+		
+		userRepository.save(user);
+		
+	}
 
 	@Override
 	public void updateUser(String userId, String active, String role) {
@@ -74,7 +101,7 @@ public class UserServiceImpl implements UserService{
 	@Override
 	public void updatePassword(Integer userId, String username, String oldPassword, String newPassword)
 			throws UserNotFoundException, PasswordInvalidException {
-		User user = userRepository.findUserByName(username).get();
+		User user = userRepository.findUserByName(username);
         if (user == null) {
             throw new UserNotFoundException();
         }

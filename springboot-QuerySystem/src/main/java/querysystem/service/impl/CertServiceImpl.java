@@ -21,7 +21,7 @@ public class CertServiceImpl implements CertService{
 	@Override
 	public UserCert getCert(String username, String password) throws CertException{
 		
-		User user = userRepository.findUserByName(username).get();
+		User user = userRepository.findUserByName(username);
 		if(user == null) {
 			throw new UserNotFoundException();
 		}
