@@ -41,6 +41,7 @@ public interface ProductRepository extends JpaRepository<Product, Integer>{
     
     void deleteById(Integer productId);
     
-    @Query("SELECT p.type,(p.sales + COALESCE(COUNT(o.type), 0)) AS Sales FROM Product p LEFT JOIN Order o ON p.type = o.type GROUP BY p.type, p.sales")
+    //SELECT p.type,(p.sales + COALESCE(COUNT(o.type), 0)) AS Sales FROM Product p LEFT JOIN Order o ON p.type = o.type GROUP BY p.type, p.sales
+    @Query("SELECT p.type,p.sales FROM Product p")
     List<Object[]> Ranking();
 }

@@ -41,12 +41,13 @@
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="/logout" style="display: ${userCert.role == null ? 'none' : 'block'};">登出</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/rate" >外幣匯率查詢</a></li>
                 </ul>
-					<form class="d-flex mt-3" role="search">
+					<!-- <form class="d-flex mt-3" role="search">
 						<input class="form-control me-2" type="search"
 							placeholder="Search" aria-label="Search">
 						<button class="btn btn-success" type="submit">Search</button>
-					</form>
+					</form> -->
 				</div>
         </div>
     </div>

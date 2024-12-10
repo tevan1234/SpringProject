@@ -11,10 +11,10 @@
 	            margin: 0;
 	            padding: 0;
 	            background-color: #f4f4f4;
+	            
 	        }	        
 	        .container {
-	        	
-	            display: grid;
+	            display: grid;	            
 	            grid-template-columns: repeat(3, 1fr);
 	            gap: 20px;
 	            padding: 20px;
@@ -24,15 +24,18 @@
 	            border-radius: 5px;
 	            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 	            overflow: hidden;
-	            text-align: center;
+	            text-align: center;	            
 	            padding: 15px;
+	            margin-top: 50px;
 	        }
 	        .card img {
 	            width: 100%;
 	            height: 50%;
 	        }
 	        footer {
-	            text-align: center;
+	        	display:flex;
+	            justify-content: center; /* 水平居中對齊 */
+    			align-items: center; /* 垂直居中對齊 */
 	            padding: 10px;
 	            background: #007bff;
 	            color: white;
@@ -66,9 +69,7 @@
 	    </div>
 	
 	    <footer>
-	        <h2>聯絡我們</h2>
-	        <p>電話: 123-456-7890</p>
-	        <p>電子郵件: info@insurance.com</p>
+	        <p>聯絡我們 | 電話: 123-456-7890 | 電子郵件: info@insurance.com</p>
 	    </footer>
 	</body>
 </html>
