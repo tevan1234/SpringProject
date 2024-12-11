@@ -48,6 +48,7 @@
 					return;
 				}
             }
+            
         </script>
     </head>
     <body style="background-color: #f4e500">
@@ -70,7 +71,7 @@
                     帳號: <input type="text" name="username" placeholder="請輸入 username" required /><p />
                     密碼: <input type="text" name="password" placeholder="請輸入 password" required /><p />
                     手機: <input type="text" name="phone" placeholder="請輸入 phone" required /><p />
-                    電郵: <input type="email" name="mail" placeholder="選填 email" required /><p />
+                    電郵: <input type="email" name="mail" placeholder="選填 email" value="<%= session.getAttribute("savedMail") != null ? session.getAttribute("savedMail") : "" %>" required /><p />
                     驗證碼: <input type="text" name="code" placeholder="請輸入 四位數驗證碼" required /><p />
                     <button type="reset" class="button-warning pure-button">Reset</button>
                     <button type="submit" class="button-success pure-button">Submit</button>

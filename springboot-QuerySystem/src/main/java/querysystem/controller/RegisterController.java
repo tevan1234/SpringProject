@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+import jakarta.websocket.Session;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -34,7 +36,7 @@ public class RegisterController {
 	}
 	
 	@PostMapping("/sendMail")
-	public String sendMail(HttpServletResponse resp) {
+	public String sendMail(HttpServletResponse resp,String mail,HttpSession session) {
 		try {
 			Integer verifycode = (int) (Math.random() * 8998)+1002;
             // 使用 GmailService 發送郵件
@@ -45,6 +47,9 @@ public class RegisterController {
             verifyCodeCookie.setMaxAge(5 * 60); // 設置有效期 5 分鐘
             verifyCodeCookie.setPath("/"); // 設置 Cookie 的作用範圍
             resp.addCookie(verifyCodeCookie);
+            
+            session.setAttribute("savedMail", mail);
+            
             return "redirect:/register";
         } catch (Exception e) {
             e.printStackTrace();

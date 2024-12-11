@@ -22,4 +22,5 @@ public interface ProductService {
 	
 	Map<String, Integer> Ranking();
 	
+	Map<String, Boolean> CheckStatus();
 }

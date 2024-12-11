@@ -77,4 +77,16 @@ public class ProductServiceImpl implements ProductService{
 		return rankingMap;
 	}
 
+	@Override
+	public Map<String, Boolean> CheckStatus() {
+		List<Object[]> results = productRepository.checkProductStatus();
+		Map<String, Boolean> statusMap = new HashMap<>();
+		for (Object[] row : results) {
+			String type = (String) row[0];
+			Boolean status = (Boolean) row[1];
+			statusMap.put(type, status);			
+		}
+		return statusMap;
+	}
+
 }

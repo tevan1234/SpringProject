@@ -75,7 +75,7 @@
 					<label for="inputPassword4" class="form-label">被保人身分證字號</label> 
 					<input type="text" name="insuredCN" class="form-control" >
 				</div>
-				<div class="col-4">
+				<!-- <div class="col-4">
 					<label for="inputAddress" class="form-label">保險種類(下拉選單)</label> 
 					<select name="orderType" class="form-control" >
 						<option value="汽車險">汽車險</option>
@@ -84,6 +84,16 @@
 						<option value="意外險">意外險</option>
 						<option value="天災險">天災險</option>
 						<option value="儲蓄險">儲蓄險</option>
+					</select>
+				</div> -->
+				<div class="col-4">
+					<label for="inputAddress" class="form-label">保險種類(下拉選單)</label> 
+					<select name="orderType" class="form-control" >
+						<c:forEach var="value" items="${statusMap.keySet()}">
+						    <c:if test="${statusMap[value]}">
+						        <option value="${value}">${value}</option>
+						    </c:if>
+						</c:forEach>
 					</select>
 				</div>
 				<div class="col-4">

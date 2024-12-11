@@ -22,10 +22,6 @@ public interface ProductRepository extends JpaRepository<Product, Integer>{
     // 根據 ID 查詢產品
     Optional<Product> findById(Integer id);
 
-    // 根據產品名稱查詢
-    //@Query("SELECT p.status FROM Product p WHERE p.type = :productType")
-    //Product checkProductStatus(String productType);
-    
     // 新增商品，JpaRepository的save方法會處理
     // void addProduct(Product product); // 使用 save() 替代
     
@@ -44,4 +40,8 @@ public interface ProductRepository extends JpaRepository<Product, Integer>{
     //SELECT p.type,(p.sales + COALESCE(COUNT(o.type), 0)) AS Sales FROM Product p LEFT JOIN Order o ON p.type = o.type GROUP BY p.type, p.sales
     @Query("SELECT p.type,p.sales FROM Product p")
     List<Object[]> Ranking();
+    
+    // 根據產品名稱查詢產品狀態
+    @Query("SELECT p.type,p.status FROM Product p")
+    List<Object[]> checkProductStatus();
 }

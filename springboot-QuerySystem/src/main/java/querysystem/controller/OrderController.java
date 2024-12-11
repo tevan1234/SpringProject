@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import querysystem.model.dto.OrderDto;
 import querysystem.service.OrderService;
+import querysystem.service.ProductService;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,11 +24,14 @@ public class OrderController {
 	
 	@Autowired
 	private OrderService orderService;
+	@Autowired
+	private ProductService productService;
 	
 	@GetMapping
 	protected String orderPage(Model model) {
 		List<OrderDto>orderDtos = orderService.findAll();
 		model.addAttribute("orderDtos", orderDtos);
+		model.addAttribute("statusMap", productService.CheckStatus());
 		return "order/order";
 	}
 	
