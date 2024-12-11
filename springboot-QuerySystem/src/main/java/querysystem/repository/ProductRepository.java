@@ -23,8 +23,8 @@ public interface ProductRepository extends JpaRepository<Product, Integer>{
     Optional<Product> findById(Integer id);
 
     // 根據產品名稱查詢
-    //@Query("SELECT p FROM Product p WHERE p.type = :productType")
-    //Product findProductByType(String productType);
+    //@Query("SELECT p.status FROM Product p WHERE p.type = :productType")
+    //Product checkProductStatus(String productType);
     
     // 新增商品，JpaRepository的save方法會處理
     // void addProduct(Product product); // 使用 save() 替代

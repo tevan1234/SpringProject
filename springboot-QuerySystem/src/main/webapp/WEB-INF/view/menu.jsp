@@ -40,8 +40,9 @@
                             <li><a class="dropdown-item" href="#">Something else here</a></li> -->
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="/logout" style="display: ${userCert.role == null ? 'none' : 'block'};">登出</a></li>
                     <li class="nav-item"><a class="nav-link" href="/rate" >外幣匯率查詢</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/logout" style="display: ${userCert.role == null ? 'none' : 'block'};">登出</a></li>
+                    
                 </ul>
 					<!-- <form class="d-flex mt-3" role="search">
 						<input class="form-control me-2" type="search"
