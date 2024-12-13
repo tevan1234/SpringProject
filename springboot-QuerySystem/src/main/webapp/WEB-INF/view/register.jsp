@@ -7,6 +7,31 @@
         <title>註冊帳戶</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css">
         <link rel="stylesheet" href="/querysystem/css/buttons.css">
+        <style>
+        	form {
+                max-width: 50%;
+                margin: 50px auto;
+                background-color: #fff;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+            
+            input[type="text"], input[type="email"], input[type="password"], input[type="number"] {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border-radius: 5px;
+                border: 1px solid #ddd;
+                font-size: 16px;
+                box-sizing: border-box;
+            }
+
+            input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+                border-color: #5cb85c;
+                outline: none;
+            }
+        </style>
         <script>
             // 讀取 Cookie 的工具函數
             function getCookie(name) {

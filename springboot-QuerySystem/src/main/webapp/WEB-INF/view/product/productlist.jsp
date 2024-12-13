@@ -40,8 +40,8 @@
 					保險種類: <input type="text" name="productType" placeholder="請輸入 保險種類" required /><p /><p />
 					年繳額: <input type="text" name="price" placeholder="請輸入 年繳額" required /><p />
 					
-					<button type="reset" class="button-warning pure-button">Reset</button>
-					<button type="submit" class="button-success pure-button">Submit</button>
+					<button type="reset" class="button-warning pure-button">重置</button>
+					<button type="submit" class="button-success pure-button">送出</button>
 				</fieldset>
 			</form>
 		</div>
