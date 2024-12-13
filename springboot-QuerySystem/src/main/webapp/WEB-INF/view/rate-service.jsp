@@ -10,7 +10,7 @@
 	<%@ include file="/WEB-INF/view/menu.jsp" %>
 	<div style = "padding : 20px">
 		<h1>即時查詢外幣匯率</h1>
-		<div>
+		<!-- <div>
 			<button id="connectButton">連接 WebSocket</button>
 			<button id="disconnectButton" disabled>斷開 WebSocket</button>
 		</div>
@@ -18,7 +18,7 @@
 		<div style="margin-top: 20px;">
 			<button id="subscribeButton" disabled>訂閱查詢匯率服務</button>
 			<button id="unsubscribeButton" disabled>取消訂閱查詢匯率服務</button>
-		</div>
+		</div> -->
 	
 		<div style="margin-top: 20px;">
 			<h2>接收的訊息</h2>
@@ -27,10 +27,33 @@
 		</div>
 	</div>
 	<script>
-        let websocket;
+        //let websocket;
+		// 建立 WebSocket 連線
+        const socket = new WebSocket('ws://localhost:8081/rate-service');
 
+        // 當 WebSocket 連線開啟時觸發
+        socket.onopen = function(event) {
+            console.log('連線成功，發送訂閱指令');
+            socket.send('SUBSCRIBE_RATE');  // 自動訂閱匯率服務
+        };
+
+        // 當接收到訊息時觸發
+        socket.onmessage = function(event) {
+            const responseDiv = document.getElementById('messages');
+            responseDiv.innerHTML = event.data;  // 顯示來自伺服器的訊息
+        };
+
+        // 當 WebSocket 發生錯誤時觸發
+        socket.onerror = function(event) {
+            console.error('WebSocket 發生錯誤:', event);
+        };
+
+        // 當 WebSocket 連線關閉時觸發
+        socket.onclose = function(event) {
+            console.log('WebSocket 連線已關閉');
+        };
         // 日誌函數
-        const logMessage = (message) => {
+        /*const logMessage = (message) => {
             const messagesDiv = document.getElementById("messages");
             //messagesDiv.innerHTML += `\${message}<br>`;
             messagesDiv.innerHTML = `\${message}<br>`;
@@ -105,6 +128,7 @@
                 unsubscribeButton.disabled = true;
             }
         };
+        */
     </script>
 </body>
 </html>
