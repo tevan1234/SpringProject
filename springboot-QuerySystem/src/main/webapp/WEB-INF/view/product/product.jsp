@@ -83,41 +83,75 @@
         .card-button:hover {
             background-color: #ff4757;
         }
-        
-        /* Popup Overlay */
-        .popup-overlay {
+                
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+            max-height: 90%; /* 限制最大高度 */
+    		overflow-y: auto; /* 啟用垂直滾動條 */
+            z-index: 1000;
+        }
+        .popup h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        .popup .section {
+            margin-bottom: 20px;
+        }
+        .popup .section h2 {
+            color: #333;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+        }
+        .overlay {
             display: none;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1000;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
         }
-
-        /* Popup Content */
-        .popup-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            width: 400px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            text-align: center;
+        .show {
+            display: block;
         }
-        .popup-close {
-            background-color: red;
-            color: white;
-            padding: 5px 10px;
+        .close-btn {
+            display: block;
+            margin: 20px auto 0;
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: #fff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            float: right;
+            text-align: center;
         }
+        .close-btn:hover {
+            background: #45a049;
+        }
+        .open-btn {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .open-btn:hover {
+            background: #45a049;
+        }
+        
     </style>
 </head>
 <body style="background-color: #f4e500">
@@ -146,21 +180,27 @@
                 else
                 	document.getElementById(i).style.display = "none";
             }
-		}
-		function showPopup(title, description) {
-	        document.getElementById("popup-title").innerText = title;
-	        document.getElementById("popup-description").innerText = description;
-	        document.getElementById("popup").style.display = "block";
-	    }
+		}		
+	    
+	    function openPopup(title,age,sp1,sp2,sp3,item,type,time,limit) {
+            document.querySelector('.popup').classList.add('show');
+            document.querySelector('.overlay').classList.add('show');
+            document.getElementById("title").innerText = title;
+            document.getElementById("age").innerText = age;
+            document.getElementById("sp1").innerText = sp1;
+            document.getElementById("sp2").innerText = sp2;
+            document.getElementById("sp3").innerText = sp3;
+            document.getElementById("item").innerText = item;
+            document.getElementById("type").innerText = type;
+            document.getElementById("time").innerText = time;
+            document.getElementById("limit").innerText = limit;
+        }
 
-	    function closePopup() {
-	        document.getElementById("popup").style.display = "none";
-	    }
+        function closePopup() {
+            document.querySelector('.popup').classList.remove('show');
+            document.querySelector('.overlay').classList.remove('show');
+        }
 
-	    // Close popup when clicking outside the content
-	    document.getElementById("popup").addEventListener("click", function (e) {
-	    	if (e.target === this) closePopup();
-	    });
 	</script>
 	
     <!-- Card Container -->
@@ -170,15 +210,15 @@
             <img src="image/p1.jpg" alt="汽車險">
             <div class="card-title">汽車險</div>
             <div class="card-description">強制險2年期還更優惠!</div>
-            <button class="card-button" onclick="showPopup('汽車險', '專為汽車車主設計的保險，涵蓋車輛在事故中可能產生的損失與責任，包括車體損壞、第三方責任及駕駛人意外保障等。根據需求，可選擇強制險、第三責任險或全險，提供全面保障。同時，長期方案如2年期保單更具優惠，讓您安心駕駛，減少經濟負擔。')">了解更多</button>
-        </div>
-
+            <button class="card-button" onclick="openPopup('汽車險','18歲以上，並且需持有有效駕照者。','多元保障內容','高額賠償保障','附加服務多元化','車輛損失補償、道路救援服務、租車補助','躉繳、分期','一年期','車齡及使用目的限制 : 針對高齡車輛、營業車輛需加收保費')">了解更多</button>
+        </div>		
+			
         <!-- Card 2 -->
         <div class="card" id=2>
             <img src="image/p2.jpg" alt="旅平險">
             <div class="card-title">旅平險</div>
             <div class="card-description">快速秒懂各險種組合保障!</div>
-            <button class="card-button" onclick="showPopup('旅平險','專為旅客設計的保險，涵蓋旅途中可能發生的意外風險，包括意外身故、醫療費用、行李遺失及旅程延誤等保障。根據需求，可選擇單次旅程或全年保障計劃，提供靈活的保障選項。讓您在旅途中安心無憂，減少突發狀況帶來的經濟負擔與壓力。')">了解更多</button>
+            <button class="card-button" onclick="openPopup('旅平險','0歲~99歲','意外事故保障','高額賠償保障','醫療費用補償','旅行相關保障','躉繳','國內旅遊投保期間上限為30天，國外旅遊投保期間上限180天','國外旅遊團體最高限額得為 200 萬元')">了解更多</button>
         </div>
 
         <!-- Card 3 -->
@@ -186,7 +226,7 @@
             <img src="image/p3.jpg" alt="重大傷病險">
             <div class="card-title">重大傷病險</div>
             <div class="card-description">別跟荷包過不去，補救方法看過來！</div>
-            <button class="card-button" onclick="showPopup('重大傷病險','針對特定重大疾病與傷病提供保障的保險，涵蓋罹患癌症、中風、心肌梗塞等重大疾病或遭遇重大傷害時的醫療與經濟需求。此險種通常提供一次性理賠金，幫助被保人支付高額醫療費用、康復開銷或日常生活支出，減輕財務壓力。適合希望為自身健康提供額外保障的個人或家庭，確保重大健康事件時安心應對。')">了解更多</button>
+            <button class="card-button" onclick="openPopup('重大傷病險','21歲~60歲','多元保障內容','提供全面保障','高額保險金給付','醫療與復健費用補償','年繳','5年期','限50萬元')">了解更多</button>
         </div>
 
         <!-- Card 4 -->
@@ -194,7 +234,7 @@
             <img src="image/p4.jpg" alt="意外險">
             <div class="card-title">意外險</div>
             <div class="card-description">3方案推薦 讓你輕鬆保險煩惱!</div>
-            <button class="card-button" onclick="showPopup('意外險','針對突發意外事件提供保障的保險，涵蓋意外導致的身故、失能、燒燙傷、住院醫療等費用。此險種範圍廣泛，包括交通事故、運動傷害或其他意外事故，並可依需求選擇不同保障項目。保費相對低廉，但能在關鍵時刻提供即時的經濟支持，減輕個人或家庭的財務壓力，是日常生活中不可或缺的風險管理工具。')">了解更多</button>
+            <button class="card-button" onclick="openPopup('意外險','20歲~65歲','短期高保障','職業與生活風險保障','海外及跨區域保障','意外身故、失能金','躉繳','1年期','限10萬')">了解更多</button>
         </div>
 
         <!-- Card 5 -->
@@ -202,7 +242,7 @@
             <img src="image/p5.jpg" alt="天災險">
             <div class="card-title">天災險</div>
             <div class="card-description">受夠淹水及颱風，不要再當冤大頭!</div>
-            <button class="card-button" onclick="showPopup('天災險','專為應對自然災害所設計的保險，涵蓋因颱風、地震、洪水、火山爆發等災害導致的財物損失。它提供修繕或重建的經濟支援，有效減輕災後的財務壓力。適用於個人住宅、商業建築及其他資產，保障範圍靈活可選，是為應對不可抗力風險的重要防護措施，助您安心度過難關。')">了解更多</button>
+            <button class="card-button" onclick="openPopup('天災險','18歲~65歲','快速理賠','針對多種自然災害的全面保障','靈活投保','財物保障、責任保障、損失補償','躉繳、分期','短期、1年期、長期',' 50 萬元到 300 萬元')">了解更多</button>
         </div>
 
         <!-- Card 6 -->
@@ -210,17 +250,49 @@
             <img src="image/p6.jpg" alt="Supercar Coverage">
             <div class="card-title">儲蓄險</div>
             <div class="card-description">買保險還能夠存錢!</div>
-            <button class="card-button" onclick="showPopup('儲蓄險','兼具保障與理財功能的保險，透過定期繳納保費累積資金，提供穩定的儲蓄收益。同時，儲蓄險還包含壽險保障，確保在被保人發生意外或身故時提供經濟支援。適合有理財需求且希望兼顧家庭保障的人士，是一種穩健、安全的長期財務規劃工具，幫助實現教育金、退休金等目標。')">了解更多</button>
+            <button class="card-button" onclick="openPopup('儲蓄險','0歲~74歲','保障與儲蓄雙重功能','現金價值與紅利','長期儲蓄，短期負擔','財物保障、責任保障、損失補償','年繳、半年繳、季繳、月繳','6年期','身故/完全失能給付、滿期給付、紅利給付')">了解更多</button>
         </div>
         
-        <!-- Popup Overlay -->
-	    <div class="popup-overlay" id="popup">
-	        <div class="popup-content">
-	            <button class="popup-close" onclick="closePopup()">&times;</button>
-	            <h2 id="popup-title">Title</h2>
-	            <p id="popup-description">Description</p>
+        <div class="overlay" onclick="closePopup()"></div>
+	    <div class="popup">
+	        <h1 id="title"></h1>
+	
+	        <div class="section">
+	            <h2>承保年齡</h2>
+	            <p id="age"></p>
 	        </div>
-	    </div>
+	
+	        <div class="section">
+	            <h2>商品特色</h2>
+	            <ul>
+	                <li id="sp1"></li>
+	                <li id="sp2"></li>
+	                <li id="sp3"></li>
+	            </ul>
+	        </div>
+	
+	        <div class="section">
+	            <h2>給付項目</h2>
+	            <p id="item"></p>
+	        </div>
+	
+	        <div class="section">
+	            <h2>繳費方式</h2>
+	            <p id="type"></p>
+	        </div>
+	
+	        <div class="section">
+	            <h2>保險期間</h2>
+	            <p id="time"></p>
+	        </div>	
+	        	
+	        <div class="section">
+	            <h2>所繳保險費限制</h2>
+	            <p id="limit"></p>
+	        </div>
+	
+	        <button class="close-btn" onclick="closePopup()">關閉</button>
+	    </div>        
 	    
     </div>
 </body>

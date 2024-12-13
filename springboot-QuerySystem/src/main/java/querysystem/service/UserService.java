@@ -17,6 +17,8 @@ public interface UserService {
 	void addUser(String cardNumber, String username, String password, String phone, String mail, String role);
 	
 	void RegisterUser(String CardNumber,String username, String password,String phone,String mail,String code,Integer verifycode);
+	
+	void RegisterUser(String CardNumber,String username, String password,String phone);
 
 	void updateUser(String userId, String active, String role);
 

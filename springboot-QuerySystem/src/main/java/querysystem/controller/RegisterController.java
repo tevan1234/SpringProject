@@ -61,6 +61,7 @@ public class RegisterController {
 	@PostMapping("/active")
 	public String userActive(HttpServletRequest req,HttpServletResponse resp, String cardNumber, String username, String password, String phone, String mail, String code) {
 		String verifyCode = null;
+		
         for (Cookie cookie : req.getCookies()) {
             if ("verifycode".equals(cookie.getName())) {
                 verifyCode = cookie.getValue();                
@@ -68,7 +69,11 @@ public class RegisterController {
             }
         }
 		
-		userService.RegisterUser(cardNumber, username, password, phone, mail, code, Integer.parseInt(verifyCode));
+        if (mail.isEmpty() && code.isEmpty()) {
+			userService.RegisterUser(cardNumber, username, password, phone);
+		}
+        else
+        	userService.RegisterUser(cardNumber, username, password, phone, mail, code, Integer.parseInt(verifyCode));
 		return "redirect:/login";
 	}
 	

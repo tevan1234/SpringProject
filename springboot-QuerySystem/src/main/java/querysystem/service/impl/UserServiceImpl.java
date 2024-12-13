@@ -87,6 +87,26 @@ public class UserServiceImpl implements UserService{
 		userRepository.save(user);
 		
 	}
+	
+	@Override
+	public void RegisterUser(String CardNumber, String username, String password, String phone) {
+		String salt = Hash.getSalt();
+		String newpassword = Hash.getHash(password,salt);
+		Boolean active = false;
+		String mail = null;
+		
+		User user = new User();
+		user.setCardNumber(CardNumber);
+		user.setName(username);
+		user.setSalt(salt);
+		user.setPassword(newpassword);
+		user.setPhone(phone);
+		user.setMail(mail);
+		user.setRole("CUSTOMER");
+		user.setActive(active);
+		
+		userRepository.save(user);
+	}
 
 	@Override
 	public void updateUser(String userId, String active, String role) {
@@ -129,5 +149,7 @@ public class UserServiceImpl implements UserService{
 		userRepository.deleteUserById(Integer.parseInt(userId));
 		
 	}
+
+	
 
 }
