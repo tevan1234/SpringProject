@@ -95,7 +95,7 @@
 			%>
 				<p class="alert"><%= errorMessage %></p>
 				<script>
-				    showAlertAndRedirect("<%= errorMessage %>", "/register");
+				    showAlertAndRedirect("<%= errorMessage %>", "/login");
 				</script>
 			<%
 			    }
