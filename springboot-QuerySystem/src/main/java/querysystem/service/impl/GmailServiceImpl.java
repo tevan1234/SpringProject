@@ -86,7 +86,7 @@ public class GmailServiceImpl implements GmailService{
         String formattedDateTime = now.format(formatter);        
         
         // 將日期與時間加入信件內容
-        String fullBodyText = bodyText +String.valueOf(code)+ "\n\nSent on: " + formattedDateTime;
+        String fullBodyText = bodyText +String.format("%04d",code)+ "\n\nSent on: " + formattedDateTime;
         email.setText(fullBodyText);
         return email;
 	}

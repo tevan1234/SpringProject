@@ -1,5 +1,7 @@
 package querysystem.controller;
 
+import java.security.SecureRandom;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -38,12 +40,13 @@ public class RegisterController {
 	@PostMapping("/sendMail")
 	public String sendMail(HttpServletResponse resp,String mail,HttpSession session) {
 		try {
-			Integer verifycode = (int) (Math.random() * 8998)+1002;
+			SecureRandom secureRandom = new SecureRandom();
+			Integer verifycode =  secureRandom.nextInt(10000); ;
             // 使用 GmailService 發送郵件
             gmailService.sendEmail("tevan090726@gmail.com", "驗證信箱(程式測試)","驗證碼: ",verifycode);
             
             // 將驗證碼存入 Cookie
-            Cookie verifyCodeCookie = new Cookie("verifycode", String.valueOf(verifycode));
+            Cookie verifyCodeCookie = new Cookie("verifycode", String.format("%04d", verifycode));
             verifyCodeCookie.setMaxAge(5 * 60); // 設置有效期 5 分鐘
             verifyCodeCookie.setPath("/"); // 設置 Cookie 的作用範圍
             resp.addCookie(verifyCodeCookie);

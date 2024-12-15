@@ -38,14 +38,14 @@
 								<option value="EMPLOYEE">EMPLOYEE</option>
 								<option value="ADMIN">ADMIN</option>
 						  </select><p/>
-					<button type="reset" class="button-warning pure-button">Reset</button>
-					<button type="submit" class="button-success pure-button">Submit</button>
+					<button type="reset" class="button-warning pure-button">重置</button>
+					<button type="submit" class="button-success pure-button">送出</button>
 				</fieldset>
 			</form>
 		</div>
 		<form class="pure-form" style="padding: 15px">
 			<fieldset>
-				<legend>User 列表</legend>
+				<legend>使用者列表</legend>
 				<table id="myTable" class="pure-table pure-table-bordered" style="background-color: white;">
 					<thead>
 						<tr>
