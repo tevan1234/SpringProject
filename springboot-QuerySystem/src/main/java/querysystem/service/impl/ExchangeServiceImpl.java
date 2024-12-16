@@ -34,10 +34,10 @@ private static final Set<Session> subscribers = Collections.synchronizedSet(new 
 			Map<String, String[]> map = ExchangeRate.getRate();
 			StringBuilder messageBuilder = new StringBuilder();
 			
-			messageBuilder.append("<table style='border: 1px solid black ; border-collapse: collapse ; text-align : center'>")
+			messageBuilder.append("<table style='border: 1px solid black ; border-collapse: collapse ; text-align : center;background-color:white'>")
             .append("<tr>")
-            .append("<th>幣別</th><th>更新時間</th><th>現金買入</th>")
-            .append("<th>現金賣出</th><th>即期買入</th><th>即期賣出</th><th>查詢時間</th>")
+            .append("<th>幣別&nbsp;</th><th>更新時間&nbsp;</th><th>現金買入&nbsp;</th>")
+            .append("<th>現金賣出&nbsp;</th><th>即期買入&nbsp;</th><th>即期賣出&nbsp;</th><th>查詢時間&nbsp;</th>")
             .append("</tr>");
 
 			map.forEach((key, value) -> {

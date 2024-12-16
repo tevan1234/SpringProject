@@ -9,7 +9,7 @@
 <body style="background-color: #f4e500">
 	<%@ include file="/WEB-INF/view/menu.jsp" %>
 	<div style = "padding : 20px">
-		<h1>即時查詢外幣匯率</h1>
+		<h1>即時外幣匯率</h1>
 		<!-- <div>
 			<button id="connectButton">連接 WebSocket</button>
 			<button id="disconnectButton" disabled>斷開 WebSocket</button>
@@ -21,7 +21,7 @@
 		</div> -->
 	
 		<div style="margin-top: 20px;">
-			<h2>接收的訊息</h2>
+			
 			<div id="messages"
 				style="border: 1px solid #ccc; padding: 10px; height: 360px; overflow-y: scroll;"></div>
 		</div>

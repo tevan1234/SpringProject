@@ -42,7 +42,7 @@
 			    const today = new Date().toISOString().split('T')[0];
 			    const orderDateElement = document.getElementById('orderDate');
 			    if (orderDateElement) {
-			        orderDateElement.value = today;
+			        orderDateElement.setAttribute("max", today);
 			    }
 			});
 	        
