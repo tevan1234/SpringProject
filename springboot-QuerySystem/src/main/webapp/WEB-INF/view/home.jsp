@@ -15,9 +15,11 @@
 	        }	        
 	        .container {
 	            display: grid;	            
-	            grid-template-columns: repeat(3, 1fr);
-	            gap: 20px;
-	            padding: 20px;
+	            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	            gap: 25px;
+	            padding: 30px 20px;
+	            max-width: 1200px;
+	            margin: 0 auto;
 	        }
 	        .card {
 	            background: white;

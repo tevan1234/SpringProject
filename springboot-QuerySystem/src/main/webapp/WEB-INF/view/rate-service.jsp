@@ -29,7 +29,7 @@
 	<script>
         //let websocket;
 		// 建立 WebSocket 連線
-        const socket = new WebSocket('ws://localhost:8081/rate-service');
+        const socket = new WebSocket('wss://localhost:8443/rate-service');
 
         // 當 WebSocket 連線開啟時觸發
         socket.onopen = function(event) {

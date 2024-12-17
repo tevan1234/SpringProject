@@ -85,10 +85,12 @@ public class UserController {
 			UserCert userCert = (UserCert)session.getAttribute("userCert");
 			userService.updatePassword(userCert.getUserId(),userCert.getUsername() , oldPassword, newPassword);
 			model.addAttribute("message", "密碼更新成功");
-			return "result";
+			model.addAttribute("redirect", true);
+			return "/user/updatePassword";
 		} catch (Exception e) {
 			model.addAttribute("message", e.getMessage());
-            return "error";
+			model.addAttribute("redirect", true);
+            return "/user/updatePassword";
 		}        
     }
     
