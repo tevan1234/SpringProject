@@ -264,3 +264,45 @@
 2024-12-18T01:36:13.205+08:00  INFO 11520 --- [springmvc] [https-jsse-nio-8443-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2024-12-18T01:36:13.205+08:00  INFO 11520 --- [springmvc] [https-jsse-nio-8443-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2024-12-18T01:36:13.207+08:00  INFO 11520 --- [springmvc] [https-jsse-nio-8443-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-12-18T03:16:31.232+08:00  INFO 11520 --- [springmvc] [RMI TCP Connection(109)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-12-18T03:16:31.255+08:00  INFO 11520 --- [springmvc] [RMI TCP Connection(109)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-18T03:16:31.259+08:00  INFO 11520 --- [springmvc] [RMI TCP Connection(109)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-18T03:16:31.262+08:00  INFO 11520 --- [springmvc] [RMI TCP Connection(109)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-18T16:36:23.689+08:00  INFO 17976 --- [springmvc] [main] q.SpringbootQuerySystemApplication       : Starting SpringbootQuerySystemApplication using Java 21.0.5 with PID 17976 (C:\Users\USER\SpringProject\springboot-QuerySystem\target\classes started by USER in C:\Users\USER\SpringProject\springboot-QuerySystem)
+2024-12-18T16:36:23.691+08:00  INFO 17976 --- [springmvc] [main] q.SpringbootQuerySystemApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-12-18T16:36:24.524+08:00  INFO 17976 --- [springmvc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-12-18T16:36:24.524+08:00  INFO 17976 --- [springmvc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-18T16:36:24.574+08:00  INFO 17976 --- [springmvc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 3 JPA repository interfaces.
+2024-12-18T16:36:24.768+08:00  INFO 17976 --- [springmvc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-12-18T16:36:24.768+08:00  INFO 17976 --- [springmvc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-12-18T16:36:24.786+08:00  INFO 17976 --- [springmvc] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface querysystem.repository.OrderRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-12-18T16:36:24.786+08:00  INFO 17976 --- [springmvc] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface querysystem.repository.ProductRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-12-18T16:36:24.786+08:00  INFO 17976 --- [springmvc] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface querysystem.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-12-18T16:36:24.786+08:00  INFO 17976 --- [springmvc] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 JDBC repository interfaces.
+2024-12-18T16:36:25.380+08:00  INFO 17976 --- [springmvc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8443 (https)
+2024-12-18T16:36:25.400+08:00  INFO 17976 --- [springmvc] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-18T16:36:25.400+08:00  INFO 17976 --- [springmvc] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-18T16:36:25.643+08:00  INFO 17976 --- [springmvc] [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2024-12-18T16:36:25.650+08:00  INFO 17976 --- [springmvc] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-18T16:36:25.650+08:00  INFO 17976 --- [springmvc] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1902 ms
+2024-12-18T16:36:25.801+08:00  INFO 17976 --- [springmvc] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-18T16:36:25.882+08:00  INFO 17976 --- [springmvc] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-18T16:36:25.923+08:00  INFO 17976 --- [springmvc] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-18T16:36:26.237+08:00  INFO 17976 --- [springmvc] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-18T16:36:26.272+08:00  INFO 17976 --- [springmvc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-18T16:36:26.436+08:00  INFO 17976 --- [springmvc] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70777a65
+2024-12-18T16:36:26.438+08:00  INFO 17976 --- [springmvc] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-18T16:36:27.377+08:00  INFO 17976 --- [springmvc] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-18T16:36:27.436+08:00  INFO 17976 --- [springmvc] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-18T16:36:27.689+08:00  INFO 17976 --- [springmvc] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-12-18T16:36:28.285+08:00  WARN 17976 --- [springmvc] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-18T16:36:28.924+08:00  INFO 17976 --- [springmvc] [main] o.a.t.util.net.NioEndpoint.certificate   : Connector [https-jsse-nio-8443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\USER\.keystore] using alias [myssl] with trust store [null]
+2024-12-18T16:36:28.951+08:00  INFO 17976 --- [springmvc] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8443 (https) with context path '/'
+2024-12-18T16:36:28.958+08:00  INFO 17976 --- [springmvc] [main] q.SpringbootQuerySystemApplication       : Started SpringbootQuerySystemApplication in 5.686 seconds (process running for 6.448)
+2024-12-18T16:36:38.237+08:00  INFO 17976 --- [springmvc] [https-jsse-nio-8443-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-18T16:36:38.238+08:00  INFO 17976 --- [springmvc] [https-jsse-nio-8443-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-18T16:36:38.239+08:00  INFO 17976 --- [springmvc] [https-jsse-nio-8443-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-18T16:40:07.216+08:00  INFO 17976 --- [springmvc] [RMI TCP Connection(14)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-12-18T16:40:07.229+08:00  INFO 17976 --- [springmvc] [RMI TCP Connection(14)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-18T16:40:07.232+08:00  INFO 17976 --- [springmvc] [RMI TCP Connection(14)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-18T16:40:07.239+08:00  INFO 17976 --- [springmvc] [RMI TCP Connection(14)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
