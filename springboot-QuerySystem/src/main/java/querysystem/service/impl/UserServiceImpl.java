@@ -150,6 +150,18 @@ public class UserServiceImpl implements UserService{
 		
 	}
 
-	
+	/*@Override
+	public void forgetPassword(String username, String newPassword1, String newPassword2) throws UserNotFoundException {
+		User user = userRepository.findUserByName(username);		
+        
+		if (user == null) {
+            throw new UserNotFoundException();
+        }
+        
+		if (newPassword1 == newPassword2) {
+			String newPasswordHash = Hash.getHash(newPassword1, user.getSalt());
+			userRepository.updatePasswordHash(user.getId(), newPasswordHash);
+		}
+	}*/
 
 }

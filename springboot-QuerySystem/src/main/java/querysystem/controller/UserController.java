@@ -92,6 +92,6 @@ public class UserController {
 			model.addAttribute("redirect", true);
             return "/user/updatePassword";
 		}        
-    }
+    }    
     
 }
