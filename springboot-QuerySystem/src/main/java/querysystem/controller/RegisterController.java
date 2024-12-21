@@ -52,6 +52,7 @@ public class RegisterController {
             resp.addCookie(verifyCodeCookie);
             
             session.setAttribute("savedMail", mail);
+            //session.setAttribute("show", true);
             
             return "redirect:/register";
         } catch (Exception e) {

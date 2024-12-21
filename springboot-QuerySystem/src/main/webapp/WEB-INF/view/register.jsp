@@ -78,6 +78,25 @@
 				}
             }
             
+            function show(){
+            	localStorage.setItem("show", "true");
+            }
+            
+            function submit(){
+            	localStorage.clear();
+            }
+            
+            window.onload = function () {
+                if (localStorage.getItem("show") === "true") {
+                    document.getElementById("mail").style.display = "inline-block";
+                    document.getElementById("code").style.display = "inline-block";
+                    document.getElementById("label1").style.display = "inline";
+                    document.getElementById("label2").style.display = "inline";
+                    localStorage.setItem("show", "false");
+                }
+            	//localStorage.clear();
+            };
+                        
         </script>
     </head>
     <body style="background-color: #f4e500">
@@ -88,7 +107,7 @@
                 <fieldset>
                     <legend>綁定郵件</legend>
                     電郵: <input type="email" name="mail" placeholder="選填 email" required />
-                    <button type="submit" class="button-secondary pure-button">發送驗證碼</button>
+                    <button type="submit" class="button-secondary pure-button"  onclick="show()">發送驗證碼</button>
                 </fieldset>
             </form>
 
@@ -100,10 +119,10 @@
                     帳號: <input type="text" name="username" placeholder="請輸入 username" required /><p />
                     密碼: <input type="text" name="password" placeholder="請輸入 password" required /><p />
                     手機: <input type="text" name="phone" placeholder="請輸入 phone" required /><p />
-                    電郵: <input type="email" name="mail" placeholder="選填 email" value="<%= session.getAttribute("savedMail") != null ? session.getAttribute("savedMail") : "" %>"  /><p />
-                    驗證碼: <input type="text" name="code" placeholder="請輸入 四位數驗證碼"  /><p />
+                    <a id="label1" style = "display:none">電郵: </a><input id = "mail" type="email" name="mail" placeholder="選填 email" value="<%= session.getAttribute("savedMail") != null ? session.getAttribute("savedMail") : "" %>" style="display:none" /><p />
+                    <a id="label2" style = "display:none">驗證碼: </a><input id="code" type="text" name="code" placeholder="請輸入 四位數驗證碼" style="display:none" /><p />
                     <button type="reset" class="button-warning pure-button">Reset</button>
-                    <button type="submit" class="button-success pure-button">Submit</button>
+                    <button type="submit" class="button-success pure-button" onclick="submit()" >Submit</button>
                 </fieldset>
             </form>
         </div>
