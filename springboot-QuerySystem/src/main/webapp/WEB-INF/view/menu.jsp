@@ -25,9 +25,11 @@
                 	<li class="nav-item"><a class="nav-link" aria-current="page" href="/home">首頁</a></li>
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="/login" style="display: ${userCert.role == null ? 'block' : 'none'};">註冊/登入</a></li>
                     <li class="nav-item"><a class="nav-link" href="/user/info?cardNumber=${ userCert.cardNumber }" style="display: ${userCert.role == 'CUSTOMER' ? 'block' : 'none'};">我的保單</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/user" style="display: ${userCert.role == 'ADMIN' ? 'block' : 'none'};">使用者表單</a></li>
                     <li class="nav-item"><a class="nav-link" href="/order" style="display: ${userCert.role == 'EMPLOYEE' || userCert.role == 'ADMIN' ? 'block' : 'none'};">所有保單</a></li>
                     <li class="nav-item"><a class="nav-link" href="/user/update/password" style="display: ${userCert.role == null ? 'none' : 'block'};">更改密碼</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/user" style="display: ${userCert.role == 'ADMIN' ? 'block' : 'none'};">使用者表單</a></li>
+                    
+                    
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             查看更多

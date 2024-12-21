@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -22,35 +21,47 @@
 				text-align: center;
 				background: #fff;
 				border-radius: 10px;
-				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-				padding: 20px;
-				width: 300px;
+				box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+				padding: 30px;
+				width: 400px; /* 增加寬度 */
+				animation: fadeIn 1s ease-in-out;
+			}
+			@keyframes fadeIn {
+				from { opacity: 0; transform: translateY(-20px); }
+				to { opacity: 1; transform: translateY(0); }
 			}
 			legend {
-				font-size: 24px;
+				font-size: 28px;
 				font-weight: bold;
-				margin-bottom: 15px;
+				margin-bottom: 20px;
 				color: #ff5722;
 			}
 			input[type="text"], input[type="password"] {
 				width: calc(100% - 20px);
-				padding: 10px;
-				margin: 10px 0;
+				padding: 12px;
+				margin: 12px 0;
 				border: 1px solid #ccc;
 				border-radius: 5px;
 				box-sizing: border-box;
+				font-size: 14px;
+			}
+			.buttons {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr); /* 2 列 */
+				grid-gap: 10px; /* 按鈕間距 */
+				margin-top: 10px;
 			}
 			button {
-				width: 48%;
-				margin: 5px 1%;
-				padding: 10px;
+				width: 100%; /* 使按鈕填滿格子 */
+				padding: 12px;
 				border: none;
 				border-radius: 5px;
 				font-size: 16px;
 				cursor: pointer;
+				transition: background-color 0.3s, color 0.3s;
 			}
 			button[type="reset"] {
-				background-color: #f1f1f1;
+				background-color: #e0e0e0;
 				color: #333;
 			}
 			button[type="submit"] {
@@ -60,8 +71,20 @@
 			button:hover {
 				opacity: 0.9;
 			}
+			button:focus {
+				outline: none;
+				box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+			}
+			button[type="button"] {
+				background-color: #007bff;
+				color: white;
+			}
+			button[type="button"]:hover {
+				background-color: #0056b3;
+			}
 			.alert {
 				color: red;
+				font-weight: bold;
 				margin-top: 15px;
 			}
 		</style>
@@ -72,7 +95,7 @@
 	        }
 	    </script>
 	</head>
-	<body >
+	<body>
 		<div class="wrapper">
 			<form class="pure-form" method="post" action="/login">
 				<fieldset>
@@ -81,9 +104,10 @@
 					<input type="text" id="username" name="username" placeholder="請輸入帳號" required />
 					<label for="password">🔐 密碼：</label>
 					<input type="password" id="password" name="password" placeholder="請輸入密碼" required />
-					<div>
+					<div class="buttons">
 						<button type="reset" class="pure-button">重置</button>
 						<button type="submit" class="pure-button pure-button-primary">登入</button>
+						<button type="button" class="pure-button" onclick="window.location.href='/user/reset/sendMail';">忘記密碼</button>
 						<button type="button" class="pure-button" onclick="window.location.href='/register';">註冊</button>
 					</div>
 				</fieldset>

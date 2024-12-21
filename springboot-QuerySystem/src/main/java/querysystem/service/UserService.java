@@ -24,7 +24,7 @@ public interface UserService {
 
     void updatePassword(Integer userId, String username, String oldPassword, String newPassword) throws UserNotFoundException, PasswordInvalidException;
     
-    //void forgetPassword(String username, String newPassword1, String newPassword2)throws UserNotFoundException;
+    void resetPassword(String username, String mail, String newPassword)throws UserNotFoundException;
     
     void updateInfo(String userId, String phone, String mail);
 

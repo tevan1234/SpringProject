@@ -5,7 +5,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>更改密碼</title>
+		<title>忘記密碼</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css">
 		<link rel="stylesheet" href="/querysystem/css/buttons.css">
 		
@@ -18,16 +18,15 @@
 	</head>
 	<body style="background-color: #fff400a6;">
 		<%@ include file="/WEB-INF/view/menu.jsp" %>
-		<form style="padding: 15px" class="pure-form" method="post" action="/user/update/password">
-			<fieldset>
-				<legend>更改密碼</legend>
-					帳號  : ${ userCert.username }<p />
-					原密碼: <input type="text" name="oldPassword" placeholder="請輸入原密碼" required /><p /><p />
-					新密碼: <input type="text" name="newPassword" placeholder="請輸入新密碼" required /><p />
-					<button type="reset" class="button-warning pure-button">重置</button>
-					<button type="submit" class="button-success pure-button">送出</button>
-			</fieldset>
-		</form>
+		<form style="padding: 15px" class="pure-form" method="post" action="/user/reset/sendMail">
+            <fieldset>
+                <legend>重設新密碼</legend>
+                帳戶: <input type="text" name="username" placeholder="請輸入 username" required /><p /><p />
+                電郵: <input type="email" name="mail" placeholder="請輸入綁定 email" required /><p />
+                <button type="submit" class="button-secondary pure-button"  onclick="show()">送出</button>
+            </fieldset>
+        </form>		
+		
 		<%
 			String message = (String) request.getAttribute("message");
 			Boolean redirect = (Boolean) request.getAttribute("redirect");
