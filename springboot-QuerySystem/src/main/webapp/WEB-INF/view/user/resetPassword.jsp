@@ -34,7 +34,7 @@
 		%>
 		<p class="alert"><%= message %></p>
 		<script>
-			showAlertAndRedirect("<%= message %>", "/home");
+			showAlertAndRedirect("<%= message %>", "/user/reset/sendMail");
 		</script>
 		<%
 			}
