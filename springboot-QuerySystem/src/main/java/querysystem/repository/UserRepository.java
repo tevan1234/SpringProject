@@ -53,5 +53,7 @@ public interface UserRepository extends JpaRepository<User, Integer>{
     void updatePasswordHash(Integer userId, String newPasswordHash);
     
     // 根據 userId 刪除使用者
+    @Modifying
+    @Transactional
     void deleteUserById(Integer userId);
 }
