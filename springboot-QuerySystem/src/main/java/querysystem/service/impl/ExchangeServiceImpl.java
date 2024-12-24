@@ -6,6 +6,7 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import java.util.TimeZone;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -29,7 +30,7 @@ private static final Set<Session> subscribers = Collections.synchronizedSet(new 
 	
 	static {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss E");
-		
+		sdf.setTimeZone(TimeZone.getTimeZone("Asia/Taipei"));
 		Runnable task = () -> {
 			Map<String, String[]> map = ExchangeRate.getRate();
 			StringBuilder messageBuilder = new StringBuilder();
@@ -48,7 +49,7 @@ private static final Set<Session> subscribers = Collections.synchronizedSet(new 
 			                .append("<td>").append(value[2]).append("</td>")
 			                .append("<td>").append(value[3]).append("</td>")
 			                .append("<td>").append(value[4]).append("</td>")
-			                .append("<td>").append(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss E").format(new Date())).append("</td>")
+			                .append("<td>").append(sdf.format(new Date())).append("</td>")
 			                .append("</tr>");
 			});
 

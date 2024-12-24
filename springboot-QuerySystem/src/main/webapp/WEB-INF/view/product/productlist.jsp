@@ -48,7 +48,7 @@
 		<form class="pure-form" style="padding: 15px">
 			<fieldset>
 				<legend>
-			        product 列表
+			        商品列表
 			        <a href="/product/rank" class="btn btn-outline-success" style="margin-left: 20px;">保單銷售排行</a>
 			    </legend>				
 				<table id="myTable" class="pure-table pure-table-bordered" style="background-color: white;">
@@ -81,8 +81,8 @@
 	                language: {
 	                    url: "https://cdn.datatables.net/plug-ins/1.11.3/i18n/zh_Hant.json"
 	                },
-	                lengthMenu: [5, 10, 15],	                
-	                pageLength: 5,
+	                lengthMenu: [10, 15, 20],	                
+	                pageLength: 10,
 	                dom: 'RlBfrtip',
 	                
 				    initComplete: function () {
